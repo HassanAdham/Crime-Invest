@@ -12,11 +12,13 @@ namespace Crime_Invest
 {
     public partial class LoginForm : Form
     {
-        CrimeType test2; 
+        Officer o;
+        Admin a;
         public LoginForm()
         {
             InitializeComponent();
-         test2=new CrimeType("1","Hazem");
+            o = new Officer();
+            a = new Admin();
         }
 
         private void username_txt_Enter(object sender, EventArgs e)
@@ -85,7 +87,7 @@ namespace Crime_Invest
 
         private void username_txt_OnValueChanged(object sender, EventArgs e)
         {
-            if (username_txt.Text == "")
+            /*if (username_txt.Text == "")
             { }
             else
             {
@@ -97,13 +99,47 @@ namespace Crime_Invest
                 {
                     s.Insert(n - 2, "#");
                 }
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
-            f.Show();
+            List<Officer> LO = o.read();
+            List<Admin> LA = a.read();
+            string[] results = username_txt.Text.Split('#');
+            string id = results[0];
+            string name = results[1];
+            bool isO = false, isA = false;
+            for (int i = 0; i < LO.Count; i++)
+            {
+                if (name == LO[i].O_name && id == LO[i].O_id && password_txt.Text == LO[i].O_Password)
+                {
+                    isO = true;
+                }
+            }
+
+            for (int i = 0; i < LA.Count; i++)
+            {
+                if (name == LA[i].A_name && id == LA[i].A_id && password_txt.Text == LA[i].A_Password)
+                {
+                    isA = true;
+                }
+            }
+
+            if (isA)
+            {
+                Form2 form2 = new Form2();
+                form2.Show();
+            }
+            else if (isO)
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid");
+            }
         }
-    }
+    }   
 }

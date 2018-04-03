@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ArrayOfOfficer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Officer>
+    <OfficerId>12345</OfficerId>
+    <OfficerName>Khaled</OfficerName>
+    <_x0023_assigCrime>0</_x0023_assigCrime>
+    <Password>123456</Password>
+  </Officer>
+</ArrayOfOfficer>

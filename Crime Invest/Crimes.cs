@@ -46,7 +46,7 @@ namespace Crime_Invest
         public List<CrimeType> read()
         {
             List<CrimeType> list = new List<CrimeType>();
-            FileStream fs = new FileStream("CrimeType.xml", FileMode.Open);
+            FileStream fs = new FileStream("CrimeType.xml", FileMode.OpenOrCreate);
             XmlSerializer ser = new XmlSerializer(list.GetType());
              list =  (List<CrimeType>) ser.Deserialize(fs);
             fs.Close();
@@ -69,6 +69,8 @@ namespace Crime_Invest
         [XmlElement("CrimeList")]
         public List<Crime>O_Clist { set; get; }
 
+        [XmlElement("Password")]
+        public string O_Password { set; get; }
 
         public void write()
         {
@@ -90,7 +92,7 @@ namespace Crime_Invest
         public List<Officer> read()
         {
             List<Officer> list = new List<Officer>();
-            FileStream fs = new FileStream("CrimeType.xml", FileMode.Open);
+            FileStream fs = new FileStream("Officer.xml", FileMode.OpenOrCreate);
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Officer>)ser.Deserialize(fs);
             fs.Close();
@@ -130,7 +132,7 @@ namespace Crime_Invest
         public List<IPeople> read()
         {
             List<IPeople> list = new List<IPeople>();
-            FileStream fs = new FileStream("IPeople.xml", FileMode.Open);
+            FileStream fs = new FileStream("IPeople.xml", FileMode.OpenOrCreate);
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<IPeople>)ser.Deserialize(fs);
             fs.Close();
@@ -148,9 +150,8 @@ namespace Crime_Invest
         [XmlElement("AdminName")]
         public string A_name { set; get; }
 
-        [XmlElement("AdminName")]
-        public bool IsAdmin { set; get; }
-
+        [XmlElement("Password")]
+        public string A_Password { set; get; }
 
         public void write()
         {
@@ -172,7 +173,7 @@ namespace Crime_Invest
         public List<Admin> read()
         {
             List<Admin> list = new List<Admin>();
-            FileStream fs = new FileStream("Admin.xml", FileMode.Open);
+            FileStream fs = new FileStream("Admin.xml", FileMode.OpenOrCreate);
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Admin>)ser.Deserialize(fs);
             fs.Close();
@@ -230,7 +231,7 @@ namespace Crime_Invest
         public List<Crime> read()
         {
             List<Crime> list = new List<Crime>();
-            FileStream fs = new FileStream("Admin.xml", FileMode.Open);
+            FileStream fs = new FileStream("Admin.xml", FileMode.OpenOrCreate);
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Crime>)ser.Deserialize(fs);
             fs.Close();
