@@ -19,3 +19,6 @@ E:\Hazem Hazem\Crime Invest\Crime Invest\obj\Debug\Crime Invest.csproj.CoreCompi
 E:\Hazem Hazem\Crime Invest\Crime Invest\obj\Debug\Crime Invest.exe
 E:\Hazem Hazem\Crime Invest\Crime Invest\obj\Debug\Crime Invest.pdb
 E:\Hazem Hazem\Crime Invest\Crime Invest\obj\Debug\Crime_Invest.Form2.resources
+E:\FCIS\Projects\Crime-Invest\Crime Invest\bin\Debug\Crime Invest.exe.config
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.exe
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.pdb

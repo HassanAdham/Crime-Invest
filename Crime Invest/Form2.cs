@@ -20,10 +20,9 @@ namespace Crime_Invest
             test = new CrimeType();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
-            List<CrimeType> li=test.read();
-            dataGridView1.DataSource = li;
+
         }
     }
 }
