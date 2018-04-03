@@ -36,3 +36,10 @@ E:\Hazem Hazem\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.csproj.CoreCompi
 E:\Hazem Hazem\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.exe
 E:\Hazem Hazem\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.pdb
 >>>>>>> 1bfc62a8f81411dc63fe18b3c9f2e5409d6f6317
+E:\FCIS\Projects\Crime-Invest\Crime Invest\bin\Debug\Crime Invest.exe
+E:\FCIS\Projects\Crime-Invest\Crime Invest\bin\Debug\Crime Invest.pdb
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.csprojResolveAssemblyReference.cache
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.LoginForm.resources
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.Form2.resources
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.Properties.Resources.resources
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.csproj.GenerateResource.Cache

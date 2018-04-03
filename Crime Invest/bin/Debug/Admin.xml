@@ -5,4 +5,9 @@
     <AdminName>Hazem</AdminName>
     <Password>123456</Password>
   </Admin>
+  <Admin>
+    <AdminID>67890</AdminID>
+    <AdminName>Hazem</AdminName>
+    <Password>123456</Password>
+  </Admin>
 </ArrayOfAdmin>

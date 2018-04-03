@@ -66,7 +66,8 @@ namespace Crime_Invest
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = username_txt;
+            username_txt.Focus();
         }
 
         protected override void WndProc(ref Message m)
@@ -87,19 +88,29 @@ namespace Crime_Invest
 
         private void username_txt_OnValueChanged(object sender, EventArgs e)
         {
-            /*if (username_txt.Text == "")
-            { }
+            bool f = false;
+            if (username_txt.Text == "")
+            {
+                f = true;
+            }
             else
             {
                 int n = username_txt.Text.Length;
                 string s = username_txt.Text;
-                if (s[n - 1] >= 48 && s[n - 1] <= 57)
-                { }
-                else
+                try
                 {
-                    s.Insert(n - 2, "#");
+                    if (!(s[n - 1] >= 48 && s[n - 1] <= 57) && (s[n - 2] >= 48 && s[n - 2] <= 57) && f == false)
+                    {
+                        username_txt.Text = s.Insert(n - 1, "#");
+                        f = true;
+                        
+                    }
                 }
-            }*/
+                catch
+                {
+                    MessageBox.Show("Please Write Your ID First");
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
