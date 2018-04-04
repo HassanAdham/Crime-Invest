@@ -24,5 +24,50 @@ namespace Crime_Invest
         {
 
         }
+
+        private void UserStgTab_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UserStgTab.Checked)
+            {
+                panel1.Visible = false;
+                panel2.Visible = true;
+                panel3.Visible = false;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CrimeTypesTab_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CrimeTypesTab.Checked)
+            {
+                panel1.Visible = true;
+                panel2.Visible = false;
+                panel3.Visible = false;
+            }
+        }
+
+        private void CrimesTab_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CrimesTab.Checked)
+            {
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = true;
+            }
+        }
     }
 }

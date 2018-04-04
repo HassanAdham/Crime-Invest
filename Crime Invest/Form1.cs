@@ -115,7 +115,7 @@ namespace Crime_Invest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Officer> LO = o.read();
+            /*List<Officer> LO = o.read();
             List<Admin> LA = a.read();
             string[] results = username_txt.Text.Split('#');
             string id = results[0];
@@ -150,7 +150,10 @@ namespace Crime_Invest
             else
             {
                 MessageBox.Show("Invalid");
-            }
+            }*/
+            Form2 form2 = new Form2();
+            form2.Show();
         }
+
     }   
 }
