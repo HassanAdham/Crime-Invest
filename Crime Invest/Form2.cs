@@ -72,7 +72,16 @@ namespace Crime_Invest
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox1.Checked)
+            {
+                label2.Visible = true;
+                label3.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                checkBox2.Checked = false;
+                button2.Visible = true;
+                button2.Text = "add";
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -83,6 +92,25 @@ namespace Crime_Invest
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                label2.Visible = true;
+                label3.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                checkBox1.Checked = false;
+                button2.Visible = true;
+                button2.Text = "update";
+            }
         }
     }
 }
