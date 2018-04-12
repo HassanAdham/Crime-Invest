@@ -74,11 +74,13 @@ namespace Crime_Invest
         {
             if (checkBox1.Checked)
             {
+                officersBox.Visible = false;
                 label2.Visible = true;
                 label3.Visible = true;
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 checkBox2.Checked = false;
+                checkBox3.Checked = false;
                 button2.Visible = true;
                 button2.Text = "add";
             }
@@ -96,6 +98,7 @@ namespace Crime_Invest
 
         private void button3_Click(object sender, EventArgs e)
         {
+  
 
         }
 
@@ -103,14 +106,37 @@ namespace Crime_Invest
         {
             if (checkBox2.Checked)
             {
+                officersBox.Visible = true;
                 label2.Visible = true;
                 label3.Visible = true;
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 checkBox1.Checked = false;
+                checkBox3.Checked = false;
                 button2.Visible = true;
                 button2.Text = "update";
             }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                officersBox.Visible = true;
+                button2.Visible = true;
+                button2.Text = "delete";
+                label2.Visible = false;
+                label3.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

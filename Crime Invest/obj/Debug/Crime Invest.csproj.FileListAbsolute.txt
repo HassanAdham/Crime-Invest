@@ -43,3 +43,4 @@ E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.LoginForm.reso
 E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.Form2.resources
 E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.Properties.Resources.resources
 E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime Invest.csproj.GenerateResource.Cache
+E:\FCIS\Projects\Crime-Invest\Crime Invest\obj\Debug\Crime_Invest.Form3.resources
