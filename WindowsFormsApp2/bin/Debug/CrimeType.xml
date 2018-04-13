@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfCrimeType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CrimeType>
+    <TypeId>1</TypeId>
+    <TypeName>Drug</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>2</TypeId>
+    <TypeName>Murder</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>3</TypeId>
+    <TypeName>Robbery</TypeName>
+  </CrimeType>
+</ArrayOfCrimeType>

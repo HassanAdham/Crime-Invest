@@ -1,0 +1,24 @@
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\CI.csprojResolveAssemblyReference.cache
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form3.resources
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\CI.csproj.GenerateResource.cache
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\CI.csproj.CoreCompileInputs.cache
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+c:\users\toshiba7\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\hazem\CIH\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\hazem\CIH\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\hazem\CIH\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\CI.csprojResolveAssemblyReference.cache
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form3.resources
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\CI.csproj.GenerateResource.cache
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\CI.csproj.CoreCompileInputs.cache
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
