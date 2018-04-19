@@ -22,3 +22,15 @@ E:\hazem\CIH\WindowsFormsApp2\obj\Debug\CI.csproj.GenerateResource.cache
 E:\hazem\CIH\WindowsFormsApp2\obj\Debug\CI.csproj.CoreCompileInputs.cache
 E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 E:\hazem\CIH\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\CI.csprojResolveAssemblyReference.cache
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form3.resources
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\CI.csproj.GenerateResource.Cache
+E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\bin\Debug\Bunifu_UI_v1.5.3.dll

@@ -17,9 +17,26 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.Controls.Add(pictureBox2);
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox1.Controls.Add(label1);
+            label1.BackColor = Color.Transparent;
+            pictureBox1.Controls.Add(label2);
+            label2.BackColor = Color.Transparent;
             o = new Officer();
             a = new Admin();
         }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST)
+                m.Result = (IntPtr)(HT_CAPTION);
+        }
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -70,6 +87,77 @@ namespace WindowsFormsApp2
               }*/
             Form2 form2 = new Form2(admin);
             form2.Show();
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }    
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            int n = textBox1.Text.Length;
+            if (s.Length == 0) { }
+            else if (!(s[n - 1] >= 48 && s[n - 1] <= 57) && s[n - 2] != '#')
+            {
+                s = s.Insert(n - 1, "#");
+                textBox1.Text = s;
+                textBox1.SelectionStart = textBox1.Text.Length ; 
+
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            usernameTxt.LineIdleColor = Color.FromArgb(234, 63, 79);
+            usernameTxt.LineFocusedColor = Color.FromArgb(234, 63, 79);
+            if (textBox1.Text == "ID#Officer Name")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.White;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            usernameTxt.LineIdleColor = Color.DarkGray;
+            usernameTxt.LineFocusedColor = Color.DarkGray;
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "ID#Officer Name";
+                textBox1.ForeColor = Color.DarkGray;
+            }
+
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            pwTxt.LineIdleColor = Color.FromArgb(234, 63, 79);
+            pwTxt.LineFocusedColor = Color.FromArgb(234, 63, 79);
+            if (textBox2.Text == "Password")
+            {
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.White;
+                textBox2.PasswordChar = '*';
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            pwTxt.LineIdleColor = Color.DarkGray;
+            pwTxt.LineFocusedColor = Color.DarkGray;
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Password";
+                textBox2.ForeColor = Color.DarkGray;
+                textBox2.PasswordChar = '\0';
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
