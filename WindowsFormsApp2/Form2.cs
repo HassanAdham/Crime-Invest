@@ -56,41 +56,6 @@ namespace WindowsFormsApp2
 
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(radioButton1.Checked)
-            {
-                panel1.Visible = true;
-                panel2.Visible = false;
-                panel3.Visible = false;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                panel1.Visible = false;
-                panel2.Visible = true;
-                panel3.Visible = false;
-            }
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-            {
-                panel1.Visible = false;
-                panel2.Visible = false;
-                panel3.Visible = true;
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             CrimeType cType = new CrimeType();
@@ -101,11 +66,6 @@ namespace WindowsFormsApp2
 
             cType.T_id = list.Count.ToString();
             cType.write();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
@@ -223,6 +183,85 @@ namespace WindowsFormsApp2
             off.O_name = textBox5.Text;
             off.assigNum = Int32.Parse(textBox6.Text);
             MessageBox.Show("Updated");
+        }
+
+        private void TypesButton_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            TypesButton.IsTab = true;
+            ManageButton.IsTab = false;
+            CrimesButton.IsTab = false;
+        }
+
+        private void ManageButton_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
+            ManageButton.IsTab = true;
+            TypesButton.IsTab = false;
+            CrimesButton.IsTab = false;
+        }
+
+        private void CrimesButton_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+            ManageButton.IsTab = false;
+            TypesButton.IsTab = false;
+            CrimesButton.IsTab = true;
+        }
+
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+            if (SideMenu.Width == 35)
+            {
+                SideMenu.Visible = false;
+                SideMenu.Width = 135;
+                BtnMenu.Location = new Point(108, 5);
+                PanelAnimator.ShowSync(SideMenu);
+                LogoAnimator.ShowSync(BtnMenu);
+            }
+            else
+            {
+
+                SideMenu.Visible = false;
+                SideMenu.Width = 35;
+                BtnMenu.Location = new Point(7, 5);
+                PanelAnimator.ShowSync(SideMenu);
+                LogoAnimator.ShowSync(BtnMenu);
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Add crime type")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.White;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Add crime type";
+                textBox1.ForeColor = Color.White;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
