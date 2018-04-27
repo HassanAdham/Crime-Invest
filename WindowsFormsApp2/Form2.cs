@@ -41,12 +41,12 @@ namespace WindowsFormsApp2
 
             for (int i = 0; i < LO.Count; i++)
             {
-                comboBox5.Items.Add(LO[i].O_id);
+                officerCmbo.Items.Add(LO[i].O_id);
             }
 
             for (int i = 0; i < LCT.Count; i++)
             {
-                comboBox2.Items.Add(LCT[i].T_name);
+                typeCmbo.Items.Add(LCT[i].T_name);
             }
 
         }
@@ -91,7 +91,7 @@ namespace WindowsFormsApp2
         {
             for(int i =0; i < LC.Count; i++)
             {
-                if (LC[i].C_id == comboBox1.Text)
+                if (LC[i].C_id == selectCmbo.Text)
                 {
                     LC.RemoveAt(i);
                 }
@@ -106,7 +106,7 @@ namespace WindowsFormsApp2
         {
             Crime crime = new Crime();
 
-            string cName = comboBox2.Text;
+            string cName = typeCmbo.Text;
 
 
             CrimeType cType = new CrimeType();
@@ -122,14 +122,14 @@ namespace WindowsFormsApp2
             }
 
 
-            crime.C_offId = comboBox5.Text;
+            crime.C_offId = officerCmbo.Text;
 
             List<Crime> clist = crime.read();
             crime.C_id = clist.Count.ToString();
 
-            crime.C_Area = comboBox3.Text;
+            crime.C_Area = areaCmbo.Text;
 
-            string boolean = comboBox4.Text;
+            string boolean = statusCmbo.Text;
             if (boolean == "true")
             {
                 crime.C_Stat = true;
@@ -147,9 +147,9 @@ namespace WindowsFormsApp2
             }
             IPeople people = new IPeople();
             people.IP_name = textBox4.Text;
-            people.IP_age = Int32.Parse(agecombo.Text);
-            people.IP_locatoin = loccombo.Text;
-            string boolean2 = IsDispcombo.Text;
+            people.IP_age = Int32.Parse(ageCmbo.Text);
+            people.IP_locatoin = locationCmbo.Text;
+            string boolean2 = disputesCmbo.Text;
             if (boolean2 == "true")
             {
                 people.IP_disp = true;

@@ -47,20 +47,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.addimgBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.IsDispcombo = new System.Windows.Forms.ComboBox();
+            this.disputesCmbo = new System.Windows.Forms.ComboBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.loccombo = new System.Windows.Forms.ComboBox();
-            this.agecombo = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.locationCmbo = new System.Windows.Forms.ComboBox();
+            this.ageCmbo = new System.Windows.Forms.ComboBox();
+            this.officerCmbo = new System.Windows.Forms.ComboBox();
+            this.statusCmbo = new System.Windows.Forms.ComboBox();
+            this.areaCmbo = new System.Windows.Forms.ComboBox();
+            this.typeCmbo = new System.Windows.Forms.ComboBox();
+            this.selectCmbo = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -85,6 +84,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.doneBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,6 +101,7 @@
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,6 +175,11 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Tan;
+            this.panel2.Controls.Add(this.radioButton4);
+            this.panel2.Controls.Add(this.radioButton5);
+            this.panel2.Controls.Add(this.radioButton6);
+            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label8);
@@ -175,26 +189,32 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.nextBtn);
+            this.panel2.Controls.Add(this.doneBtn);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.backBtn);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.addimgBtn);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.comboBox11);
-            this.panel2.Controls.Add(this.IsDispcombo);
+            this.panel2.Controls.Add(this.disputesCmbo);
             this.panel2.Controls.Add(this.comboBox9);
-            this.panel2.Controls.Add(this.loccombo);
-            this.panel2.Controls.Add(this.agecombo);
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.comboBox4);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.locationCmbo);
+            this.panel2.Controls.Add(this.ageCmbo);
+            this.panel2.Controls.Add(this.officerCmbo);
+            this.panel2.Controls.Add(this.statusCmbo);
+            this.panel2.Controls.Add(this.areaCmbo);
+            this.panel2.Controls.Add(this.typeCmbo);
+            this.panel2.Controls.Add(this.selectCmbo);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
             this.LogoAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(41, 54);
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(41, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(686, 430);
             this.panel2.TabIndex = 4;
@@ -202,11 +222,15 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PanelAnimator.SetDecoration(this.textBox2, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.textBox2, BunifuAnimatorNS.DecorationType.None);
-            this.textBox2.Location = new System.Drawing.Point(60, 148);
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(188, 118);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(184, 117);
             this.textBox2.TabIndex = 22;
             // 
             // pictureBox1
@@ -214,9 +238,9 @@
             this.PanelAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(170, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(390, 170);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(275, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -224,107 +248,137 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.label8.Location = new System.Drawing.Point(82, 305);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(36, 333);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.Size = new System.Drawing.Size(121, 22);
             this.label8.TabIndex = 20;
-            this.label8.Text = "itm found";
+            this.label8.Text = "Items Found";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
-            this.label7.Location = new System.Drawing.Point(235, 262);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(184, 242);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.Size = new System.Drawing.Size(161, 22);
             this.label7.TabIndex = 19;
-            this.label7.Text = "involved ppl";
+            this.label7.Text = "Involved People";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
-            this.label6.Location = new System.Drawing.Point(235, 180);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(36, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(96, 22);
             this.label6.TabIndex = 18;
-            this.label6.Text = "oficr id";
+            this.label6.Text = "Officer ID";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Location = new System.Drawing.Point(82, 243);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(36, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.Size = new System.Drawing.Size(114, 22);
             this.label5.TabIndex = 17;
-            this.label5.Text = "crim aarealabel5";
+            this.label5.Text = "Crime Area";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
-            this.label4.Location = new System.Drawing.Point(82, 180);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(36, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(65, 22);
             this.label4.TabIndex = 16;
-            this.label4.Text = "stts";
+            this.label4.Text = "Status";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.label3.Location = new System.Drawing.Point(81, 125);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(184, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(169, 22);
             this.label3.TabIndex = 15;
-            this.label3.Text = "descrb4n";
+            this.label3.Text = "Crime Description";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Location = new System.Drawing.Point(90, 70);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(36, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(112, 22);
             this.label2.TabIndex = 14;
-            this.label2.Text = "crim typ";
+            this.label2.Text = "Crime Type";
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.PanelAnimator.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
-            this.button6.Location = new System.Drawing.Point(276, 152);
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(40, 388);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(121, 28);
             this.button6.TabIndex = 12;
-            this.button6.Text = "button5";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Text = "Add Item";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // addimgBtn
             // 
-            this.PanelAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
-            this.button5.Location = new System.Drawing.Point(85, 391);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.addimgBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.addimgBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.addimgBtn, BunifuAnimatorNS.DecorationType.None);
+            this.addimgBtn.FlatAppearance.BorderSize = 0;
+            this.addimgBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addimgBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addimgBtn.ForeColor = System.Drawing.Color.White;
+            this.addimgBtn.Location = new System.Drawing.Point(292, 359);
+            this.addimgBtn.Name = "addimgBtn";
+            this.addimgBtn.Size = new System.Drawing.Size(80, 25);
+            this.addimgBtn.TabIndex = 12;
+            this.addimgBtn.Text = "Add photo";
+            this.addimgBtn.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
             this.PanelAnimator.SetDecoration(this.button4, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.button4, BunifuAnimatorNS.DecorationType.None);
-            this.button4.Location = new System.Drawing.Point(291, 95);
+            this.button4.Location = new System.Drawing.Point(334, 66);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -335,7 +389,7 @@
             // 
             this.PanelAnimator.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
-            this.button3.Location = new System.Drawing.Point(291, 60);
+            this.button3.Location = new System.Drawing.Point(415, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -347,7 +401,7 @@
             // 
             this.PanelAnimator.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.button2.Location = new System.Drawing.Point(291, 28);
+            this.button2.Location = new System.Drawing.Point(238, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -355,122 +409,161 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox11
+            // disputesCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox11, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox11, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(245, 391);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(121, 21);
-            this.comboBox11.TabIndex = 8;
-            // 
-            // IsDispcombo
-            // 
-            this.LogoAnimator.SetDecoration(this.IsDispcombo, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.IsDispcombo, BunifuAnimatorNS.DecorationType.None);
-            this.IsDispcombo.FormattingEnabled = true;
-            this.IsDispcombo.Location = new System.Drawing.Point(245, 337);
-            this.IsDispcombo.Name = "IsDispcombo";
-            this.IsDispcombo.Size = new System.Drawing.Size(121, 21);
-            this.IsDispcombo.TabIndex = 8;
+            this.disputesCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.disputesCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.disputesCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.disputesCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.disputesCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.disputesCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.disputesCmbo.FormattingEnabled = true;
+            this.disputesCmbo.Location = new System.Drawing.Point(188, 329);
+            this.disputesCmbo.Name = "disputesCmbo";
+            this.disputesCmbo.Size = new System.Drawing.Size(184, 25);
+            this.disputesCmbo.TabIndex = 8;
+            this.disputesCmbo.Text = "Have Disputes ?";
             // 
             // comboBox9
             // 
+            this.comboBox9.BackColor = System.Drawing.Color.DarkGray;
             this.LogoAnimator.SetDecoration(this.comboBox9, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.comboBox9, BunifuAnimatorNS.DecorationType.None);
+            this.comboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.comboBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(245, 364);
+            this.comboBox9.Location = new System.Drawing.Point(188, 359);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 21);
+            this.comboBox9.Size = new System.Drawing.Size(98, 25);
             this.comboBox9.TabIndex = 8;
+            this.comboBox9.Text = "Past history";
             // 
-            // loccombo
+            // locationCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.loccombo, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.loccombo, BunifuAnimatorNS.DecorationType.None);
-            this.loccombo.FormattingEnabled = true;
-            this.loccombo.Location = new System.Drawing.Point(245, 310);
-            this.loccombo.Name = "loccombo";
-            this.loccombo.Size = new System.Drawing.Size(121, 21);
-            this.loccombo.TabIndex = 8;
+            this.locationCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.locationCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.locationCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.locationCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.locationCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.locationCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.locationCmbo.FormattingEnabled = true;
+            this.locationCmbo.Location = new System.Drawing.Point(248, 298);
+            this.locationCmbo.Name = "locationCmbo";
+            this.locationCmbo.Size = new System.Drawing.Size(124, 25);
+            this.locationCmbo.TabIndex = 8;
+            this.locationCmbo.Text = "Location";
             // 
-            // agecombo
+            // ageCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.agecombo, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.agecombo, BunifuAnimatorNS.DecorationType.None);
-            this.agecombo.FormattingEnabled = true;
-            this.agecombo.Location = new System.Drawing.Point(245, 283);
-            this.agecombo.Name = "agecombo";
-            this.agecombo.Size = new System.Drawing.Size(121, 21);
-            this.agecombo.TabIndex = 8;
+            this.ageCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.ageCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.ageCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.ageCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ageCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.ageCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.ageCmbo.FormattingEnabled = true;
+            this.ageCmbo.Location = new System.Drawing.Point(188, 298);
+            this.ageCmbo.Name = "ageCmbo";
+            this.ageCmbo.Size = new System.Drawing.Size(54, 25);
+            this.ageCmbo.TabIndex = 8;
+            this.ageCmbo.Text = "Age";
             // 
-            // comboBox5
+            // officerCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox5, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox5, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(194, 196);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 8;
+            this.officerCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.officerCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.officerCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.officerCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.officerCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.officerCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.officerCmbo.FormattingEnabled = true;
+            this.officerCmbo.Location = new System.Drawing.Point(40, 299);
+            this.officerCmbo.Name = "officerCmbo";
+            this.officerCmbo.Size = new System.Drawing.Size(121, 25);
+            this.officerCmbo.TabIndex = 8;
             // 
-            // comboBox4
+            // statusCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox4, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox4, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(49, 196);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 7;
+            this.statusCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.statusCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.statusCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.statusCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.statusCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.statusCmbo.FormattingEnabled = true;
+            this.statusCmbo.Items.AddRange(new object[] {
+            "Opened",
+            "Closed"});
+            this.statusCmbo.Location = new System.Drawing.Point(40, 181);
+            this.statusCmbo.Name = "statusCmbo";
+            this.statusCmbo.Size = new System.Drawing.Size(121, 25);
+            this.statusCmbo.TabIndex = 7;
             // 
-            // comboBox3
+            // areaCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox3, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox3, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(39, 262);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 6;
+            this.areaCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.areaCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.areaCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.areaCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.areaCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.areaCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.areaCmbo.FormattingEnabled = true;
+            this.areaCmbo.Location = new System.Drawing.Point(40, 240);
+            this.areaCmbo.Name = "areaCmbo";
+            this.areaCmbo.Size = new System.Drawing.Size(121, 25);
+            this.areaCmbo.TabIndex = 6;
             // 
-            // comboBox2
+            // typeCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox2, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox2, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(49, 91);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
+            this.typeCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.typeCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.typeCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.typeCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typeCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.typeCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.typeCmbo.FormattingEnabled = true;
+            this.typeCmbo.Location = new System.Drawing.Point(40, 125);
+            this.typeCmbo.Name = "typeCmbo";
+            this.typeCmbo.Size = new System.Drawing.Size(121, 25);
+            this.typeCmbo.TabIndex = 5;
             // 
-            // comboBox1
+            // selectCmbo
             // 
-            this.LogoAnimator.SetDecoration(this.comboBox1, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox1, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(49, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.selectCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.selectCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.selectCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.selectCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.selectCmbo.FormattingEnabled = true;
+            this.selectCmbo.Location = new System.Drawing.Point(40, 66);
+            this.selectCmbo.Name = "selectCmbo";
+            this.selectCmbo.Size = new System.Drawing.Size(121, 25);
+            this.selectCmbo.TabIndex = 4;
+            this.selectCmbo.Text = "Select Crime";
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PanelAnimator.SetDecoration(this.textBox4, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.textBox4, BunifuAnimatorNS.DecorationType.None);
-            this.textBox4.Location = new System.Drawing.Point(183, 283);
+            this.textBox4.ForeColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(188, 268);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(56, 20);
+            this.textBox4.Size = new System.Drawing.Size(184, 24);
             this.textBox4.TabIndex = 3;
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.LightGray;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PanelAnimator.SetDecoration(this.textBox3, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.textBox3, BunifuAnimatorNS.DecorationType.None);
-            this.textBox3.Location = new System.Drawing.Point(60, 325);
+            this.textBox3.Location = new System.Drawing.Point(40, 357);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(121, 24);
             this.textBox3.TabIndex = 2;
             // 
             // panel3
@@ -487,7 +580,7 @@
             this.panel3.Controls.Add(this.comboBox6);
             this.LogoAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Location = new System.Drawing.Point(504, 296);
+            this.panel3.Location = new System.Drawing.Point(503, 212);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(686, 430);
             this.panel3.TabIndex = 5;
@@ -504,7 +597,7 @@
             this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton3.Location = new System.Drawing.Point(342, 8);
+            this.radioButton3.Location = new System.Drawing.Point(344, 10);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(152, 40);
             this.radioButton3.TabIndex = 26;
@@ -585,7 +678,7 @@
             this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton2.Location = new System.Drawing.Point(190, 8);
+            this.radioButton2.Location = new System.Drawing.Point(192, 10);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(152, 40);
             this.radioButton2.TabIndex = 26;
@@ -604,7 +697,7 @@
             this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton1.Location = new System.Drawing.Point(38, 8);
+            this.radioButton1.Location = new System.Drawing.Point(40, 10);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(152, 40);
             this.radioButton1.TabIndex = 26;
@@ -618,7 +711,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.DarkGray;
             this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Location = new System.Drawing.Point(0, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 10);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(686, 40);
             this.pictureBox3.TabIndex = 27;
@@ -663,7 +756,7 @@
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(720, 50);
+            this.splitter1.Size = new System.Drawing.Size(1023, 50);
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
             // 
@@ -681,7 +774,7 @@
             this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideMenu.Location = new System.Drawing.Point(0, 50);
             this.SideMenu.Name = "SideMenu";
-            this.SideMenu.Size = new System.Drawing.Size(35, 430);
+            this.SideMenu.Size = new System.Drawing.Size(35, 556);
             this.SideMenu.TabIndex = 7;
             // 
             // AboutButton
@@ -954,13 +1047,159 @@
             animation1.TransparencyCoeff = 0F;
             this.LogoAnimator.DefaultAnimation = animation1;
             // 
+            // radioButton4
+            // 
+            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton4.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton4.FlatAppearance.BorderSize = 0;
+            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton4.Location = new System.Drawing.Point(422, 10);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(152, 40);
+            this.radioButton4.TabIndex = 28;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Update";
+            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton5.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton5.FlatAppearance.BorderSize = 0;
+            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton5.Location = new System.Drawing.Point(267, 10);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(152, 40);
+            this.radioButton5.TabIndex = 29;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Delete";
+            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton5.UseVisualStyleBackColor = false;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton6.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton6.FlatAppearance.BorderSize = 0;
+            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton6.Location = new System.Drawing.Point(112, 10);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(152, 40);
+            this.radioButton6.TabIndex = 30;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Add";
+            this.radioButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(686, 40);
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(390, 320);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 30);
+            this.backBtn.TabIndex = 12;
+            this.backBtn.Text = "<";
+            this.backBtn.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(446, 320);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(163, 30);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Add Image";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.ForeColor = System.Drawing.Color.White;
+            this.nextBtn.Location = new System.Drawing.Point(615, 320);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(50, 30);
+            this.nextBtn.TabIndex = 12;
+            this.nextBtn.Text = ">";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(188, 390);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(184, 25);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Add Involved Person";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // doneBtn
+            // 
+            this.doneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
+            this.doneBtn.FlatAppearance.BorderSize = 0;
+            this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doneBtn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doneBtn.ForeColor = System.Drawing.Color.White;
+            this.doneBtn.Location = new System.Drawing.Point(502, 357);
+            this.doneBtn.Name = "doneBtn";
+            this.doneBtn.Size = new System.Drawing.Size(163, 58);
+            this.doneBtn.TabIndex = 12;
+            this.doneBtn.Text = "Done";
+            this.doneBtn.UseVisualStyleBackColor = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(720, 480);
+            this.ClientSize = new System.Drawing.Size(1023, 606);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LogoutButton);
@@ -984,6 +1223,7 @@
             this.SideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -999,26 +1239,25 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button addimgBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox officerCmbo;
+        private System.Windows.Forms.ComboBox statusCmbo;
+        private System.Windows.Forms.ComboBox areaCmbo;
+        private System.Windows.Forms.ComboBox typeCmbo;
+        private System.Windows.Forms.ComboBox selectCmbo;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox IsDispcombo;
+        private System.Windows.Forms.ComboBox disputesCmbo;
         private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox loccombo;
-        private System.Windows.Forms.ComboBox agecombo;
+        private System.Windows.Forms.ComboBox locationCmbo;
+        private System.Windows.Forms.ComboBox ageCmbo;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Splitter splitter1;
@@ -1042,5 +1281,14 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
         private System.Windows.Forms.Button button7;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button doneBtn;
+        private System.Windows.Forms.Button button5;
     }
 }
