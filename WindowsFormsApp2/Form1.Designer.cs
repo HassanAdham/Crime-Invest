@@ -38,8 +38,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.username_txt = new System.Windows.Forms.TextBox();
+            this.password_txt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -164,42 +164,42 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Salmon;
-            this.label2.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(75, 187);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 20);
+            this.label2.Size = new System.Drawing.Size(242, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "YOUR INSTANT ASSISTANT";
             // 
-            // textBox1
+            // username_txt
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox1.Location = new System.Drawing.Point(58, 268);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 19);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "ID#Officer Name";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.username_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.username_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.username_txt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_txt.ForeColor = System.Drawing.Color.DarkGray;
+            this.username_txt.Location = new System.Drawing.Point(58, 268);
+            this.username_txt.Name = "username_txt";
+            this.username_txt.Size = new System.Drawing.Size(255, 19);
+            this.username_txt.TabIndex = 7;
+            this.username_txt.Text = "ID#Officer Name";
+            this.username_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.username_txt.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.username_txt.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // textBox2
+            // password_txt
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox2.Location = new System.Drawing.Point(61, 309);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 19);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Text = "Password";
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.password_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.password_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password_txt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_txt.ForeColor = System.Drawing.Color.DarkGray;
+            this.password_txt.Location = new System.Drawing.Point(61, 309);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(255, 19);
+            this.password_txt.TabIndex = 7;
+            this.password_txt.Text = "Password";
+            this.password_txt.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.password_txt.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // Form1
             // 
@@ -207,8 +207,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(350, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.password_txt);
+            this.Controls.Add(this.username_txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -243,8 +243,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox username_txt;
+        private System.Windows.Forms.TextBox password_txt;
     }
 }
 

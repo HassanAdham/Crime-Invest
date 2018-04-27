@@ -21,6 +21,9 @@ namespace WindowsFormsApp2
         List<Officer> LO = new List<Officer>();
         List<Crime> LC = new List<Crime>();
         List<CrimeType> LCT= new List<CrimeType>();
+        IPeople people = new IPeople();
+        List<IPeople> iplist = new List<IPeople>();
+        List<IPeople> ipl = new List<IPeople>();
         Admin admin = new Admin();
         public Form2(Admin a)
         {
@@ -78,8 +81,8 @@ namespace WindowsFormsApp2
                     off = LO[i];
                 }
             }
-            textBox5.Text = off.O_name;
-            textBox6.Text = off.assigNum.ToString();
+            bunifuMetroTextbox1.Text = off.O_name;
+            bunifuMetroTextbox2.Text = off.assigNum.ToString();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -89,14 +92,16 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            for(int i =0; i < LC.Count; i++)
+            for (int i = 0; i < LC.Count; i++)
             {
                 if (LC[i].C_id == selectCmbo.Text)
                 {
                     LC.RemoveAt(i);
                 }
             }
-           FileStream FS = new FileStream("Crime.xml", FileMode.Truncate);
+            FileStream FS = new FileStream("Crime.xml", FileMode.Truncate);
+            FS.Close();
+            FS = new FileStream("Crime.xml", FileMode.Append);
             XmlSerializer ser = new XmlSerializer(LC.GetType());
             ser.Serialize(FS, LC);
             FS.Close();
@@ -105,22 +110,14 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             Crime crime = new Crime();
-
             string cName = typeCmbo.Text;
-
-
-            CrimeType cType = new CrimeType();
-
-
-
             for (int i = 0; i < LCT.Count; i++)
             {
-                if (cType.T_name == cName)
+                if (LCT[i].T_name == cName)
                 {
-                    crime.C_Tid = cType.T_id;
+                    crime.C_Tid = LCT[i].T_id;
                 }
             }
-
 
             crime.C_offId = officerCmbo.Text;
 
@@ -145,27 +142,8 @@ namespace WindowsFormsApp2
             {
                 crime.C_item.Add(arr[i]);
             }
-            IPeople people = new IPeople();
-            people.IP_name = textBox4.Text;
-            people.IP_age = Int32.Parse(ageCmbo.Text);
-            people.IP_locatoin = locationCmbo.Text;
-            string boolean2 = disputesCmbo.Text;
-            if (boolean2 == "true")
-            {
-                people.IP_disp = true;
-            }
-            else
-            {
-                people.IP_disp = false;
-            }
 
-            List<IPeople> plist = people.read();
-            people.IP_id = plist.Count.ToString();
-            people.write();
-            crime.C_IP.Add(people);
-
-
-
+            crime.C_IP = ipl;
             crime.write();
 
         }
@@ -177,11 +155,17 @@ namespace WindowsFormsApp2
             {
                 if (comboBox6.Text == LO[i].O_id)
                 {
-                    off = LO[i];
+                    LO[i].O_name = bunifuMetroTextbox1.Text;
+                    LO[i].assigNum = Int32.Parse(bunifuMetroTextbox2.Text);
+                    break;
                 }
             }
-            off.O_name = textBox5.Text;
-            off.assigNum = Int32.Parse(textBox6.Text);
+            FileStream FS = new FileStream("Officer.xml", FileMode.Truncate);
+            FS.Close();
+            FS = new FileStream("Officer.xml", FileMode.Append);
+            XmlSerializer ser = new XmlSerializer(LO.GetType());
+            ser.Serialize(FS, LO);
+            FS.Close();
             MessageBox.Show("Updated");
         }
 
@@ -262,6 +246,74 @@ namespace WindowsFormsApp2
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            CrimeType ct = new CrimeType();
+            for (int i = 0; i < LO.Count; i++)
+            {
+                if (selectCmbo.Text == LC[i].C_id)
+                {
+                    for (int j = 0; j < LCT.Count; j++)
+                    {
+                        if (LCT[j].T_name == typeCmbo.Text)
+                        {
+                            LC[i].C_Tid = LCT[j].T_id;
+                            break;
+                        }
+                    }
+                    LC[i].C_desc = textBox2.Text;
+                    string b = statusCmbo.Text;
+                    if (b == "true")
+                    {
+                        LC[i].C_Stat = true;
+                    }
+                    else
+                    {
+                        LC[i].C_Stat = false;
+                    }
+                    LC[i].C_offId = officerCmbo.Text;
+                    LC[i].C_Area = areaCmbo.Text;
+                    break;
+                }
+            }
+            FileStream FS = new FileStream("Crime.xml", FileMode.Truncate);
+            FS.Close();
+            FS = new FileStream("Crime.xml", FileMode.Append);
+            XmlSerializer ser = new XmlSerializer(LC.GetType());
+            ser.Serialize(FS, LC);
+            FS.Close();
+            MessageBox.Show("Updated");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            people.IP_name = textBox4.Text;
+            people.IP_age = Int32.Parse(ageCmbo.Text);
+            people.IP_locatoin = locationCmbo.Text;
+            string boolean2 = disputesCmbo.Text;
+            if (boolean2 == "true")
+            {
+                people.IP_disp = true;
+            }
+            else
+            {
+                people.IP_disp = false;
+            }
+
+            iplist = people.read();
+            people.IP_id = iplist.Count.ToString();
+            people.write();
+            if (!ipl.Contains(people))
+            {
+                ipl.Add(people);
+            }
+            textBox4.ResetText();
+            ageCmbo.ResetText();
+            locationCmbo.ResetText();
+            disputesCmbo.ResetText();
         }
     }
 }

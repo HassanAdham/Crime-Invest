@@ -47,6 +47,11 @@ namespace WindowsFormsApp2
         {
             List<CrimeType> list = new List<CrimeType>();
             FileStream fs = new FileStream("CrimeType.xml", FileMode.OpenOrCreate);
+            if (fs.Length == 0)
+            {
+                fs.Close();
+                return list;
+            }
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<CrimeType>)ser.Deserialize(fs);
             fs.Close();
@@ -93,6 +98,11 @@ namespace WindowsFormsApp2
         {
             List<Officer> list = new List<Officer>();
             FileStream fs = new FileStream("Officer.xml", FileMode.OpenOrCreate);
+            if (fs.Length == 0)
+            {
+                fs.Close();
+                return list;
+            }
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Officer>)ser.Deserialize(fs);
             fs.Close();
@@ -139,6 +149,11 @@ namespace WindowsFormsApp2
         {
             List<IPeople> list = new List<IPeople>();
             FileStream fs = new FileStream("IPeople.xml", FileMode.OpenOrCreate);
+            if (fs.Length == 0)
+            {
+                fs.Close();
+                return list;
+            }
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<IPeople>)ser.Deserialize(fs);
             fs.Close();
@@ -180,6 +195,11 @@ namespace WindowsFormsApp2
         {
             List<Admin> list = new List<Admin>();
             FileStream fs = new FileStream("Admin.xml", FileMode.OpenOrCreate);
+            if (fs.Length == 0)
+            {
+                fs.Close();
+                return list;
+            }
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Admin>)ser.Deserialize(fs);
             fs.Close();
@@ -216,6 +236,11 @@ namespace WindowsFormsApp2
 
         [XmlElement("OfficerId")]
         public string C_offId { set; get; }
+        public Crime()
+        {
+            C_item = new List<string>();
+            C_IP = new List<IPeople>();
+        }
 
         public void write()
         {
@@ -238,6 +263,11 @@ namespace WindowsFormsApp2
         {
             List<Crime> list = new List<Crime>();
             FileStream fs = new FileStream("Crime.xml", FileMode.OpenOrCreate);
+            if (fs.Length == 0)
+            {
+                fs.Close();
+                return list;
+            }
             XmlSerializer ser = new XmlSerializer(list.GetType());
             list = (List<Crime>)ser.Deserialize(fs);
             fs.Close();

@@ -47,46 +47,46 @@ namespace WindowsFormsApp2
         {
             Officer officer = new Officer();
             Admin admin = new Admin();
-            /*  List<Officer> LO = o.read();
-              List<Admin> LA = a.read();
-              string[] results = username_txt.Text.Split('#');
-              string id = results[0];
-              string name = results[1];
-              bool isO = false, isA = false;
-              for (int i = 0; i < LO.Count; i++)
-              {
-                  if (name == LO[i].O_name && id == LO[i].O_id && password_txt.Text == LO[i].O_Password)
-                  {
-                      isO = true;
-                      officer = LO[i];
-                  }
-              }
+            List<Officer> LO = o.read();
+            List<Admin> LA = a.read();
+            string[] results = username_txt.Text.Split('#');
+            string id = results[0];
+            string name = results[1];
+            bool isO = false, isA = false;
+            for (int i = 0; i < LO.Count; i++)
+            {
+                if (name == LO[i].O_name && id == LO[i].O_id && password_txt.Text == LO[i].O_Password)
+                {
+                    isO = true;
+                    officer = LO[i];
+                }
+            }
 
-              for (int i = 0; i < LA.Count; i++)
-              {
-                  if (name == LA[i].A_name && id == LA[i].A_id && password_txt.Text == LA[i].A_Password)
-                  {
-                      isA = true;
-                      admin = LA[i];
-                  }
-              }
+            for (int i = 0; i < LA.Count; i++)
+            {
+                if (name == LA[i].A_name && id == LA[i].A_id && password_txt.Text == LA[i].A_Password)
+                {
+                    isA = true;
+                    admin = LA[i];
+                }
+            }
 
-              if (isA)
-              {
-                  Form2 form2 = new Form2(admin);
-                  form2.Show();
-              }
-              else if (isO)
-              {
-                  Form3 form3 = new Form3(officer);
-                  form3.Show();
-              }
-              else
-              {
-                  MessageBox.Show("Invalid");
-              }*/
-            Form2 form2 = new Form2(admin);
-            form2.Show();
+            if (isA)
+            {
+                Form2 form2 = new Form2(admin);
+                form2.Show();
+            }
+            else if (isO)
+            {
+                Form3 form3 = new Form3(officer);
+                form3.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid");
+            }
+            //Form2 form2 = new Form2(admin);
+            //form2.Show();
         }
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
@@ -96,15 +96,29 @@ namespace WindowsFormsApp2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string s = textBox1.Text;
-            int n = textBox1.Text.Length;
-            if (s.Length == 0) { }
-            else if (!(s[n - 1] >= 48 && s[n - 1] <= 57) && s[n - 2] != '#')
+            string s = username_txt.Text;
+            int n = username_txt.Text.Length;
+            bool f = false;
+            if (username_txt.Text == "")
             {
-                s = s.Insert(n - 1, "#");
-                textBox1.Text = s;
-                textBox1.SelectionStart = textBox1.Text.Length ; 
-
+                f = true;
+            }
+            else
+            {
+                try
+                {
+                    if (!(s[n - 1] >= 48 && s[n - 1] <= 57) && (s[n - 2] >= 48 && s[n - 2] <= 57) && f == false)
+                    {
+                        s = s.Insert(n - 1, "#");
+                        username_txt.Text = s;
+                        username_txt.SelectionStart = username_txt.Text.Length ;
+                        f = true;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Please Write Your ID First");
+                }
             }
         }
 
@@ -112,10 +126,10 @@ namespace WindowsFormsApp2
         {
             usernameTxt.LineIdleColor = Color.FromArgb(234, 63, 79);
             usernameTxt.LineFocusedColor = Color.FromArgb(234, 63, 79);
-            if (textBox1.Text == "ID#Officer Name")
+            if (username_txt.Text == "ID#Officer Name")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.White;
+                username_txt.Text = "";
+                username_txt.ForeColor = Color.White;
             }
         }
 
@@ -123,10 +137,10 @@ namespace WindowsFormsApp2
         {
             usernameTxt.LineIdleColor = Color.DarkGray;
             usernameTxt.LineFocusedColor = Color.DarkGray;
-            if (textBox1.Text == "")
+            if (username_txt.Text == "")
             {
-                textBox1.Text = "ID#Officer Name";
-                textBox1.ForeColor = Color.DarkGray;
+                username_txt.Text = "ID#Officer Name";
+                username_txt.ForeColor = Color.DarkGray;
             }
 
         }
@@ -135,11 +149,11 @@ namespace WindowsFormsApp2
         {
             pwTxt.LineIdleColor = Color.FromArgb(234, 63, 79);
             pwTxt.LineFocusedColor = Color.FromArgb(234, 63, 79);
-            if (textBox2.Text == "Password")
+            if (password_txt.Text == "Password")
             {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.White;
-                textBox2.PasswordChar = '*';
+                password_txt.Text = "";
+                password_txt.ForeColor = Color.White;
+                password_txt.PasswordChar = '*';
             }
         }
 
@@ -147,11 +161,11 @@ namespace WindowsFormsApp2
         {
             pwTxt.LineIdleColor = Color.DarkGray;
             pwTxt.LineFocusedColor = Color.DarkGray;
-            if (textBox2.Text == "")
+            if (password_txt.Text == "")
             {
-                textBox2.Text = "Password";
-                textBox2.ForeColor = Color.DarkGray;
-                textBox2.PasswordChar = '\0';
+                password_txt.Text = "Password";
+                password_txt.ForeColor = Color.DarkGray;
+                password_txt.PasswordChar = '\0';
             }
         }
 

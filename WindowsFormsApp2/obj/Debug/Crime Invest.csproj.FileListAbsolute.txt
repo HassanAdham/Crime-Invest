@@ -12,3 +12,15 @@ E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csprojResolveAssemblyReference.cache
 E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CoreCompileInputs.cache
 E:\FCIS\Projects\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CopyComplete
+E:\hazem\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\hazem\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\hazem\Crime-Invest\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form3.resources
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.GenerateResource.cache
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CoreCompileInputs.cache
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CopyComplete
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

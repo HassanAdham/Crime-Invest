@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation19 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            BunifuAnimatorNS.Animation animation20 = new BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,7 +50,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.doneBtn = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.addimgBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,16 +71,6 @@
             this.selectCmbo = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.SideMenu = new System.Windows.Forms.Panel();
             this.AboutButton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -84,24 +83,25 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.nextBtn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.doneBtn = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,7 +112,7 @@
             this.panel1.Controls.Add(this.button1);
             this.LogoAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(550, 64);
+            this.panel1.Location = new System.Drawing.Point(52, 137);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 430);
             this.panel1.TabIndex = 3;
@@ -214,11 +214,79 @@
             this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(41, 56);
+            this.panel2.Location = new System.Drawing.Point(41, 137);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(686, 430);
             this.panel2.TabIndex = 4;
             this.panel2.Visible = false;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton4.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton4.FlatAppearance.BorderSize = 0;
+            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton4.Location = new System.Drawing.Point(422, 10);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(152, 40);
+            this.radioButton4.TabIndex = 28;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Update";
+            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton5.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton5.FlatAppearance.BorderSize = 0;
+            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton5.Location = new System.Drawing.Point(267, 10);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(152, 40);
+            this.radioButton5.TabIndex = 29;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Delete";
+            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton5.UseVisualStyleBackColor = false;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton6.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton6.FlatAppearance.BorderSize = 0;
+            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton6.Location = new System.Drawing.Point(112, 10);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(152, 40);
+            this.radioButton6.TabIndex = 30;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Add";
+            this.radioButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(686, 40);
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
             // 
             // textBox2
             // 
@@ -343,6 +411,68 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Crime Type";
             // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.ForeColor = System.Drawing.Color.White;
+            this.nextBtn.Location = new System.Drawing.Point(615, 320);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(50, 30);
+            this.nextBtn.TabIndex = 12;
+            this.nextBtn.Text = ">";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            // 
+            // doneBtn
+            // 
+            this.doneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
+            this.doneBtn.FlatAppearance.BorderSize = 0;
+            this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doneBtn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doneBtn.ForeColor = System.Drawing.Color.White;
+            this.doneBtn.Location = new System.Drawing.Point(502, 357);
+            this.doneBtn.Name = "doneBtn";
+            this.doneBtn.Size = new System.Drawing.Size(163, 58);
+            this.doneBtn.TabIndex = 12;
+            this.doneBtn.Text = "Done";
+            this.doneBtn.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(446, 320);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(163, 30);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Add Image";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(390, 320);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 30);
+            this.backBtn.TabIndex = 12;
+            this.backBtn.Text = "<";
+            this.backBtn.UseVisualStyleBackColor = false;
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -357,6 +487,23 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "Add Item";
             this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(188, 390);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(184, 25);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Add Involved Person";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // addimgBtn
             // 
@@ -384,6 +531,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -565,188 +713,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 24);
             this.textBox3.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Maroon;
-            this.panel3.Controls.Add(this.radioButton3);
-            this.panel3.Controls.Add(this.bunifuMetroTextbox2);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.bunifuMetroTextbox1);
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Controls.Add(this.radioButton1);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.comboBox6);
-            this.LogoAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Location = new System.Drawing.Point(503, 212);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(686, 430);
-            this.panel3.TabIndex = 5;
-            this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton3.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton3, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton3, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton3.FlatAppearance.BorderSize = 0;
-            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton3.Location = new System.Drawing.Point(344, 10);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(152, 40);
-            this.radioButton3.TabIndex = 26;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Update";
-            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton3.UseVisualStyleBackColor = false;
-            // 
-            // bunifuMetroTextbox2
-            // 
-            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox2.BorderThickness = 3;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(38, 157);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(221, 44);
-            this.bunifuMetroTextbox2.TabIndex = 4;
-            this.bunifuMetroTextbox2.Text = "No. of assigned crimes";
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMetroTextbox2.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.bunifuMetroTextbox2.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.button7, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button7, BunifuAnimatorNS.DecorationType.None);
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(38, 208);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 42);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Add";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bunifuMetroTextbox1
-            // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox1, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(38, 105);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(221, 44);
-            this.bunifuMetroTextbox1.TabIndex = 4;
-            this.bunifuMetroTextbox1.Text = "Officer Name";
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMetroTextbox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.bunifuMetroTextbox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton2.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton2, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton2, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton2.FlatAppearance.BorderSize = 0;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton2.Location = new System.Drawing.Point(192, 10);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(152, 40);
-            this.radioButton2.TabIndex = 26;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Delete";
-            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton2.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton1.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton1, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton1, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton1.FlatAppearance.BorderSize = 0;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton1.Location = new System.Drawing.Point(40, 10);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(152, 40);
-            this.radioButton1.TabIndex = 26;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Add";
-            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Location = new System.Drawing.Point(0, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(686, 40);
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // button8
-            // 
-            this.PanelAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
-            this.button8.Location = new System.Drawing.Point(430, 140);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "update";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.BackColor = System.Drawing.Color.DarkGray;
-            this.LogoAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "12345"});
-            this.comboBox6.Location = new System.Drawing.Point(40, 69);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(150, 29);
-            this.comboBox6.TabIndex = 9;
-            this.comboBox6.Text = "Select Officer";
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // splitter1
             // 
@@ -1009,189 +975,225 @@
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.PanelAnimator.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation2;
+            animation19.AnimateOnlyDifferences = true;
+            animation19.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.BlindCoeff")));
+            animation19.LeafCoeff = 0F;
+            animation19.MaxTime = 1F;
+            animation19.MinTime = 0F;
+            animation19.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.MosaicCoeff")));
+            animation19.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation19.MosaicShift")));
+            animation19.MosaicSize = 0;
+            animation19.Padding = new System.Windows.Forms.Padding(0);
+            animation19.RotateCoeff = 0F;
+            animation19.RotateLimit = 0F;
+            animation19.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.ScaleCoeff")));
+            animation19.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation19.SlideCoeff")));
+            animation19.TimeCoeff = 0F;
+            animation19.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation19;
             // 
             // LogoAnimator
             // 
             this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.LogoAnimator.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.LogoAnimator.DefaultAnimation = animation1;
+            animation20.AnimateOnlyDifferences = true;
+            animation20.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.BlindCoeff")));
+            animation20.LeafCoeff = 0F;
+            animation20.MaxTime = 1F;
+            animation20.MinTime = 0F;
+            animation20.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.MosaicCoeff")));
+            animation20.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation20.MosaicShift")));
+            animation20.MosaicSize = 0;
+            animation20.Padding = new System.Windows.Forms.Padding(0);
+            animation20.RotateCoeff = 0F;
+            animation20.RotateLimit = 0F;
+            animation20.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.ScaleCoeff")));
+            animation20.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation20.SlideCoeff")));
+            animation20.TimeCoeff = 0F;
+            animation20.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation20;
             // 
-            // radioButton4
+            // comboBox6
             // 
-            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton4.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton4, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton4.FlatAppearance.BorderSize = 0;
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton4.Location = new System.Drawing.Point(422, 10);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(152, 40);
-            this.radioButton4.TabIndex = 28;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Update";
-            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton4.UseVisualStyleBackColor = false;
+            this.comboBox6.BackColor = System.Drawing.Color.DarkGray;
+            this.LogoAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "12345"});
+            this.comboBox6.Location = new System.Drawing.Point(40, 69);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(150, 29);
+            this.comboBox6.TabIndex = 9;
+            this.comboBox6.Text = "Select Officer";
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
-            // radioButton5
+            // button8
             // 
-            this.radioButton5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton5.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton5, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton5.FlatAppearance.BorderSize = 0;
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton5.Location = new System.Drawing.Point(267, 10);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(152, 40);
-            this.radioButton5.TabIndex = 29;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Delete";
-            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton5.UseVisualStyleBackColor = false;
+            this.PanelAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
+            this.button8.Location = new System.Drawing.Point(430, 140);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 25;
+            this.button8.Text = "update";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // radioButton6
+            // pictureBox3
             // 
-            this.radioButton6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton6.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.radioButton6, BunifuAnimatorNS.DecorationType.None);
-            this.radioButton6.FlatAppearance.BorderSize = 0;
-            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.radioButton6.Location = new System.Drawing.Point(112, 10);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(152, 40);
-            this.radioButton6.TabIndex = 30;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Add";
-            this.radioButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton6.UseVisualStyleBackColor = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(686, 40);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox4
+            // radioButton1
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox4.Location = new System.Drawing.Point(0, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(686, 40);
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton1, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton1.FlatAppearance.BorderSize = 0;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton1.Location = new System.Drawing.Point(40, 10);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(152, 40);
+            this.radioButton1.TabIndex = 26;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Add";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton1.UseVisualStyleBackColor = false;
             // 
-            // backBtn
+            // radioButton2
             // 
-            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.ForeColor = System.Drawing.Color.White;
-            this.backBtn.Location = new System.Drawing.Point(390, 320);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 30);
-            this.backBtn.TabIndex = 12;
-            this.backBtn.Text = "<";
-            this.backBtn.UseVisualStyleBackColor = false;
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton2, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton2, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton2.FlatAppearance.BorderSize = 0;
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton2.Location = new System.Drawing.Point(192, 10);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(152, 40);
+            this.radioButton2.TabIndex = 26;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Delete";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton2.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // bunifuMetroTextbox1
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(446, 320);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(163, 30);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "Add Image";
-            this.button9.UseVisualStyleBackColor = false;
+            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox1.BorderThickness = 3;
+            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox1.isPassword = false;
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(38, 105);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(221, 44);
+            this.bunifuMetroTextbox1.TabIndex = 4;
+            this.bunifuMetroTextbox1.Text = "Officer Name";
+            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMetroTextbox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.bunifuMetroTextbox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // nextBtn
+            // button7
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
-            this.nextBtn.FlatAppearance.BorderSize = 0;
-            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextBtn.ForeColor = System.Drawing.Color.White;
-            this.nextBtn.Location = new System.Drawing.Point(615, 320);
-            this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(50, 30);
-            this.nextBtn.TabIndex = 12;
-            this.nextBtn.Text = ">";
-            this.nextBtn.UseVisualStyleBackColor = false;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.PanelAnimator.SetDecoration(this.button7, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.button7, BunifuAnimatorNS.DecorationType.None);
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(38, 208);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(105, 42);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Add";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button5
+            // bunifuMetroTextbox2
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button5, BunifuAnimatorNS.DecorationType.None);
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(188, 390);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 25);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Add Involved Person";
-            this.button5.UseVisualStyleBackColor = false;
+            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox2.BorderThickness = 3;
+            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox2.isPassword = false;
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(38, 157);
+            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(221, 44);
+            this.bunifuMetroTextbox2.TabIndex = 4;
+            this.bunifuMetroTextbox2.Text = "No. of assigned crimes";
+            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMetroTextbox2.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.bunifuMetroTextbox2.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // doneBtn
+            // radioButton3
             // 
-            this.doneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.PanelAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
-            this.doneBtn.FlatAppearance.BorderSize = 0;
-            this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.doneBtn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doneBtn.ForeColor = System.Drawing.Color.White;
-            this.doneBtn.Location = new System.Drawing.Point(502, 357);
-            this.doneBtn.Name = "doneBtn";
-            this.doneBtn.Size = new System.Drawing.Size(163, 58);
-            this.doneBtn.TabIndex = 12;
-            this.doneBtn.Text = "Done";
-            this.doneBtn.UseVisualStyleBackColor = false;
+            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelAnimator.SetDecoration(this.radioButton3, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.radioButton3, BunifuAnimatorNS.DecorationType.None);
+            this.radioButton3.FlatAppearance.BorderSize = 0;
+            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.radioButton3.Location = new System.Drawing.Point(344, 10);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(152, 40);
+            this.radioButton3.TabIndex = 26;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Update";
+            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton3.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.Controls.Add(this.radioButton3);
+            this.panel3.Controls.Add(this.bunifuMetroTextbox2);
+            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.bunifuMetroTextbox1);
+            this.panel3.Controls.Add(this.radioButton2);
+            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.comboBox6);
+            this.LogoAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.panel3.Location = new System.Drawing.Point(772, 137);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(686, 430);
+            this.panel3.TabIndex = 5;
+            this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Form2
             // 
@@ -1204,8 +1206,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.SideMenu);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panel1);
             this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -1217,13 +1219,13 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.SideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1250,8 +1252,6 @@
         private System.Windows.Forms.ComboBox selectCmbo;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox disputesCmbo;
@@ -1259,7 +1259,6 @@
         private System.Windows.Forms.ComboBox locationCmbo;
         private System.Windows.Forms.ComboBox ageCmbo;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Panel SideMenu;
         private System.Windows.Forms.Button LogoutButton;
@@ -1274,13 +1273,6 @@
         private BunifuAnimatorNS.BunifuTransition LogoAnimator;
         private Bunifu.Framework.UI.BunifuMetroTextbox textBox1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
-        private System.Windows.Forms.Button button7;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
@@ -1290,5 +1282,15 @@
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button doneBtn;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private System.Windows.Forms.Button button7;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Panel panel3;
     }
 }
