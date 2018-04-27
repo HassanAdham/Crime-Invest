@@ -28,367 +28,714 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LogoutButton = new System.Windows.Forms.Button();
+            this.SideMenu = new System.Windows.Forms.Panel();
+            this.AboutButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ExitButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ManageButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.solveBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnMenu = new System.Windows.Forms.PictureBox();
+            this.selectCmbo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.doneBtn = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.statusCmbo = new System.Windows.Forms.ComboBox();
+            this.areaCmbo = new System.Windows.Forms.ComboBox();
+            this.typeCmbo = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.itemsCmbo = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.ageLbl = new System.Windows.Forms.Label();
+            this.locationLbl = new System.Windows.Forms.Label();
+            this.disLbl = new System.Windows.Forms.Label();
+            this.histLbl = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(25, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(102, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Assigned Crimes";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(25, 70);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "solve";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.doneBtn);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(170, 24);
+            this.panel1.Controls.Add(this.selectCmbo);
+            this.panel1.Location = new System.Drawing.Point(107, 538);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 420);
+            this.panel1.Size = new System.Drawing.Size(686, 430);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Salmon;
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.histLbl);
+            this.panel2.Controls.Add(this.disLbl);
+            this.panel2.Controls.Add(this.locationLbl);
+            this.panel2.Controls.Add(this.ageLbl);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.nextBtn);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.backBtn);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.statusCmbo);
+            this.panel2.Controls.Add(this.areaCmbo);
+            this.panel2.Controls.Add(this.typeCmbo);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.itemsCmbo);
+            this.panel2.Controls.Add(this.comboBox6);
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Location = new System.Drawing.Point(41, 54);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(686, 430);
+            this.panel2.TabIndex = 3;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(197, 268);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(165, 25);
+            this.comboBox6.TabIndex = 7;
+            this.comboBox6.Text = "Name";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(31, 20);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(133, 25);
+            this.comboBox2.TabIndex = 3;
+            this.comboBox2.Text = "Select Crime ID";
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1282, 50);
+            this.splitter1.TabIndex = 7;
+            this.splitter1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(16, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.LogoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButton.ForeColor = System.Drawing.Color.White;
+            this.LogoutButton.Location = new System.Drawing.Point(645, 0);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(75, 50);
+            this.LogoutButton.TabIndex = 11;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            // 
+            // SideMenu
+            // 
+            this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.SideMenu.Controls.Add(this.AboutButton);
+            this.SideMenu.Controls.Add(this.ExitButton);
+            this.SideMenu.Controls.Add(this.ManageButton);
+            this.SideMenu.Controls.Add(this.solveBtn);
+            this.SideMenu.Controls.Add(this.BtnMenu);
+            this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideMenu.Location = new System.Drawing.Point(0, 50);
+            this.SideMenu.Name = "SideMenu";
+            this.SideMenu.Size = new System.Drawing.Size(35, 802);
+            this.SideMenu.TabIndex = 12;
+            // 
+            // AboutButton
+            // 
+            this.AboutButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.AboutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.AboutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AboutButton.BorderRadius = 0;
+            this.AboutButton.ButtonText = "About";
+            this.AboutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AboutButton.DisabledColor = System.Drawing.Color.Gray;
+            this.AboutButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.AboutButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("AboutButton.Iconimage")));
+            this.AboutButton.Iconimage_right = null;
+            this.AboutButton.Iconimage_right_Selected = null;
+            this.AboutButton.Iconimage_Selected = null;
+            this.AboutButton.IconMarginLeft = 0;
+            this.AboutButton.IconMarginRight = 0;
+            this.AboutButton.IconRightVisible = true;
+            this.AboutButton.IconRightZoom = 0D;
+            this.AboutButton.IconVisible = true;
+            this.AboutButton.IconZoom = 35D;
+            this.AboutButton.IsTab = true;
+            this.AboutButton.Location = new System.Drawing.Point(0, 361);
+            this.AboutButton.Name = "AboutButton";
+            this.AboutButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.AboutButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.AboutButton.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.AboutButton.selected = false;
+            this.AboutButton.Size = new System.Drawing.Size(136, 35);
+            this.AboutButton.TabIndex = 20;
+            this.AboutButton.Text = "About";
+            this.AboutButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AboutButton.Textcolor = System.Drawing.Color.White;
+            this.AboutButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ExitButton.BorderRadius = 0;
+            this.ExitButton.ButtonText = "Exit";
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.DisabledColor = System.Drawing.Color.Gray;
+            this.ExitButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.ExitButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("ExitButton.Iconimage")));
+            this.ExitButton.Iconimage_right = null;
+            this.ExitButton.Iconimage_right_Selected = null;
+            this.ExitButton.Iconimage_Selected = null;
+            this.ExitButton.IconMarginLeft = 0;
+            this.ExitButton.IconMarginRight = 0;
+            this.ExitButton.IconRightVisible = true;
+            this.ExitButton.IconRightZoom = 0D;
+            this.ExitButton.IconVisible = true;
+            this.ExitButton.IconZoom = 35D;
+            this.ExitButton.IsTab = true;
+            this.ExitButton.Location = new System.Drawing.Point(0, 396);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ExitButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ExitButton.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.ExitButton.selected = false;
+            this.ExitButton.Size = new System.Drawing.Size(136, 35);
+            this.ExitButton.TabIndex = 21;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ExitButton.Textcolor = System.Drawing.Color.White;
+            this.ExitButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // ManageButton
+            // 
+            this.ManageButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.ManageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ManageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ManageButton.BorderRadius = 0;
+            this.ManageButton.ButtonText = "Manage";
+            this.ManageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ManageButton.DisabledColor = System.Drawing.Color.Gray;
+            this.ManageButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.ManageButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("ManageButton.Iconimage")));
+            this.ManageButton.Iconimage_right = null;
+            this.ManageButton.Iconimage_right_Selected = null;
+            this.ManageButton.Iconimage_Selected = null;
+            this.ManageButton.IconMarginLeft = 0;
+            this.ManageButton.IconMarginRight = 0;
+            this.ManageButton.IconRightVisible = true;
+            this.ManageButton.IconRightZoom = 0D;
+            this.ManageButton.IconVisible = true;
+            this.ManageButton.IconZoom = 65D;
+            this.ManageButton.IsTab = true;
+            this.ManageButton.Location = new System.Drawing.Point(0, 69);
+            this.ManageButton.Name = "ManageButton";
+            this.ManageButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ManageButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.ManageButton.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.ManageButton.selected = false;
+            this.ManageButton.Size = new System.Drawing.Size(136, 35);
+            this.ManageButton.TabIndex = 22;
+            this.ManageButton.Text = "Manage";
+            this.ManageButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ManageButton.Textcolor = System.Drawing.Color.White;
+            this.ManageButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageButton.Click += new System.EventHandler(this.ManageButton_Click);
+            // 
+            // solveBtn
+            // 
+            this.solveBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.solveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.solveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.solveBtn.BorderRadius = 0;
+            this.solveBtn.ButtonText = "Solve";
+            this.solveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.solveBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.solveBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.solveBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("solveBtn.Iconimage")));
+            this.solveBtn.Iconimage_right = null;
+            this.solveBtn.Iconimage_right_Selected = null;
+            this.solveBtn.Iconimage_Selected = null;
+            this.solveBtn.IconMarginLeft = 0;
+            this.solveBtn.IconMarginRight = 0;
+            this.solveBtn.IconRightVisible = true;
+            this.solveBtn.IconRightZoom = 0D;
+            this.solveBtn.IconVisible = true;
+            this.solveBtn.IconZoom = 80D;
+            this.solveBtn.IsTab = true;
+            this.solveBtn.Location = new System.Drawing.Point(0, 34);
+            this.solveBtn.Name = "solveBtn";
+            this.solveBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.solveBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.solveBtn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            this.solveBtn.selected = false;
+            this.solveBtn.Size = new System.Drawing.Size(136, 35);
+            this.solveBtn.TabIndex = 25;
+            this.solveBtn.Text = "Solve";
+            this.solveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.solveBtn.Textcolor = System.Drawing.Color.White;
+            this.solveBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solveBtn.Click += new System.EventHandler(this.solveBtn_Click);
+            // 
+            // BtnMenu
+            // 
+            this.BtnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenu.Image")));
+            this.BtnMenu.Location = new System.Drawing.Point(7, 9);
+            this.BtnMenu.Name = "BtnMenu";
+            this.BtnMenu.Size = new System.Drawing.Size(20, 20);
+            this.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnMenu.TabIndex = 19;
+            this.BtnMenu.TabStop = false;
+            // 
+            // selectCmbo
+            // 
+            this.selectCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.selectCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.selectCmbo.FormattingEnabled = true;
+            this.selectCmbo.Location = new System.Drawing.Point(279, 56);
+            this.selectCmbo.Name = "selectCmbo";
+            this.selectCmbo.Size = new System.Drawing.Size(129, 25);
+            this.selectCmbo.TabIndex = 5;
+            this.selectCmbo.Text = "Select Crime ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(186, 204);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(296, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "solve";
+            this.label2.Size = new System.Drawing.Size(112, 22);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Crime Type";
             // 
-            // button1
+            // doneBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(162, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Solve";
-            this.button1.UseVisualStyleBackColor = false;
+            this.doneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.doneBtn.FlatAppearance.BorderSize = 0;
+            this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doneBtn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doneBtn.ForeColor = System.Drawing.Color.White;
+            this.doneBtn.Location = new System.Drawing.Point(262, 92);
+            this.doneBtn.Name = "doneBtn";
+            this.doneBtn.Size = new System.Drawing.Size(163, 58);
+            this.doneBtn.TabIndex = 16;
+            this.doneBtn.Text = "Solve";
+            this.doneBtn.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // textBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(173, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "slct crim";
+            this.textBox3.BackColor = System.Drawing.Color.LightGray;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.textBox3.Location = new System.Drawing.Point(31, 287);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(68, 22);
+            this.textBox3.TabIndex = 14;
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 21);
-            this.comboBox1.TabIndex = 0;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(27, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 22);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Crime Area";
             // 
-            // panel2
+            // label10
             // 
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.comboBox10);
-            this.panel2.Controls.Add(this.comboBox9);
-            this.panel2.Controls.Add(this.comboBox8);
-            this.panel2.Controls.Add(this.comboBox7);
-            this.panel2.Controls.Add(this.comboBox6);
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.comboBox4);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Location = new System.Drawing.Point(596, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(494, 420);
-            this.panel2.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(27, 109);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 22);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Status";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(27, 53);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 22);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Crime Type";
+            // 
+            // statusCmbo
+            // 
+            this.statusCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.statusCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.statusCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.statusCmbo.FormattingEnabled = true;
+            this.statusCmbo.Items.AddRange(new object[] {
+            "Opened",
+            "Closed"});
+            this.statusCmbo.Location = new System.Drawing.Point(31, 134);
+            this.statusCmbo.Name = "statusCmbo";
+            this.statusCmbo.Size = new System.Drawing.Size(121, 25);
+            this.statusCmbo.TabIndex = 21;
+            // 
+            // areaCmbo
+            // 
+            this.areaCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.areaCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.areaCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.areaCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.areaCmbo.FormattingEnabled = true;
+            this.areaCmbo.Location = new System.Drawing.Point(31, 193);
+            this.areaCmbo.Name = "areaCmbo";
+            this.areaCmbo.Size = new System.Drawing.Size(121, 25);
+            this.areaCmbo.TabIndex = 20;
+            // 
+            // typeCmbo
+            // 
+            this.typeCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.typeCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typeCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.typeCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.typeCmbo.FormattingEnabled = true;
+            this.typeCmbo.Location = new System.Drawing.Point(31, 78);
+            this.typeCmbo.Name = "typeCmbo";
+            this.typeCmbo.Size = new System.Drawing.Size(121, 25);
+            this.typeCmbo.TabIndex = 19;
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(233, 301);
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(488, 73);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(233, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
+            this.textBox2.Size = new System.Drawing.Size(165, 117);
+            this.textBox2.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(260, 71);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(484, 47);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "crim typ";
+            this.label3.Size = new System.Drawing.Size(169, 22);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Crime Description";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(260, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "stts";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(187, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(275, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // nextBtn
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(260, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "crim area";
+            this.nextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.ForeColor = System.Drawing.Color.White;
+            this.nextBtn.Location = new System.Drawing.Point(412, 195);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(50, 30);
+            this.nextBtn.TabIndex = 28;
+            this.nextBtn.Text = ">";
+            this.nextBtn.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // button9
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(190, 336);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "involvd ppl";
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(243, 195);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(163, 30);
+            this.button9.TabIndex = 29;
+            this.button9.Text = "Add Image";
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // backBtn
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(269, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "item fond";
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(187, 195);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 30);
+            this.backBtn.TabIndex = 30;
+            this.backBtn.Text = "<";
+            this.backBtn.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(504, 357);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 58);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Done";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(260, 119);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(193, 243);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "describ4n";
+            this.label7.Size = new System.Drawing.Size(161, 22);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Involved People";
             // 
-            // button3
+            // label8
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(392, 299);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "updat";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(27, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 22);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Items Found";
             // 
-            // button2
+            // itemsCmbo
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(392, 266);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "addd img";
-            this.button2.UseVisualStyleBackColor = false;
+            this.itemsCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.itemsCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.itemsCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemsCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.itemsCmbo.FormattingEnabled = true;
+            this.itemsCmbo.Location = new System.Drawing.Point(31, 256);
+            this.itemsCmbo.Name = "itemsCmbo";
+            this.itemsCmbo.Size = new System.Drawing.Size(121, 25);
+            this.itemsCmbo.TabIndex = 7;
             // 
-            // comboBox10
+            // button6
             // 
-            this.comboBox10.BackColor = System.Drawing.Color.White;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(290, 393);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(66, 21);
-            this.comboBox10.TabIndex = 11;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(105, 287);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(47, 43);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Add Item";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // comboBox9
+            // ageLbl
             // 
-            this.comboBox9.BackColor = System.Drawing.Color.White;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(207, 396);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(73, 21);
-            this.comboBox9.TabIndex = 10;
+            this.ageLbl.AutoSize = true;
+            this.ageLbl.BackColor = System.Drawing.Color.Transparent;
+            this.ageLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageLbl.ForeColor = System.Drawing.Color.White;
+            this.ageLbl.Location = new System.Drawing.Point(194, 296);
+            this.ageLbl.Name = "ageLbl";
+            this.ageLbl.Size = new System.Drawing.Size(34, 17);
+            this.ageLbl.TabIndex = 33;
+            this.ageLbl.Text = "Age";
             // 
-            // comboBox8
+            // locationLbl
             // 
-            this.comboBox8.BackColor = System.Drawing.Color.White;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(207, 366);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(141, 21);
-            this.comboBox8.TabIndex = 9;
+            this.locationLbl.AutoSize = true;
+            this.locationLbl.BackColor = System.Drawing.Color.Transparent;
+            this.locationLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationLbl.ForeColor = System.Drawing.Color.White;
+            this.locationLbl.Location = new System.Drawing.Point(194, 313);
+            this.locationLbl.Name = "locationLbl";
+            this.locationLbl.Size = new System.Drawing.Size(65, 17);
+            this.locationLbl.TabIndex = 33;
+            this.locationLbl.Text = "Location";
             // 
-            // comboBox7
+            // disLbl
             // 
-            this.comboBox7.BackColor = System.Drawing.Color.White;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(147, 396);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(54, 21);
-            this.comboBox7.TabIndex = 8;
+            this.disLbl.AutoSize = true;
+            this.disLbl.BackColor = System.Drawing.Color.Transparent;
+            this.disLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disLbl.ForeColor = System.Drawing.Color.White;
+            this.disLbl.Location = new System.Drawing.Point(194, 330);
+            this.disLbl.Name = "disLbl";
+            this.disLbl.Size = new System.Drawing.Size(61, 17);
+            this.disLbl.TabIndex = 33;
+            this.disLbl.Text = "Disputes";
             // 
-            // comboBox6
+            // histLbl
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.White;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(60, 366);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(141, 21);
-            this.comboBox6.TabIndex = 7;
+            this.histLbl.AutoSize = true;
+            this.histLbl.BackColor = System.Drawing.Color.Transparent;
+            this.histLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.histLbl.ForeColor = System.Drawing.Color.White;
+            this.histLbl.Location = new System.Drawing.Point(194, 347);
+            this.histLbl.Name = "histLbl";
+            this.histLbl.Size = new System.Drawing.Size(79, 17);
+            this.histLbl.TabIndex = 33;
+            this.histLbl.Text = "Past history";
             // 
-            // comboBox5
+            // pictureBox3
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.White;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(207, 233);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(141, 21);
-            this.comboBox5.TabIndex = 6;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.Color.White;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(207, 192);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(141, 21);
-            this.comboBox4.TabIndex = 5;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(207, 92);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(141, 21);
-            this.comboBox3.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(99, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(141, 21);
-            this.comboBox2.TabIndex = 3;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(376, 268);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 99);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1221, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1282, 852);
+            this.Controls.Add(this.SideMenu);
+            this.Controls.Add(this.LogoutButton);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.SideMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button LogoutButton;
+        private System.Windows.Forms.Panel SideMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton AboutButton;
+        private Bunifu.Framework.UI.BunifuFlatButton ExitButton;
+        private Bunifu.Framework.UI.BunifuFlatButton ManageButton;
+        private Bunifu.Framework.UI.BunifuFlatButton solveBtn;
+        private System.Windows.Forms.PictureBox BtnMenu;
+        private System.Windows.Forms.ComboBox selectCmbo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button doneBtn;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox statusCmbo;
+        private System.Windows.Forms.ComboBox areaCmbo;
+        private System.Windows.Forms.ComboBox typeCmbo;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox itemsCmbo;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label ageLbl;
+        private System.Windows.Forms.Label locationLbl;
+        private System.Windows.Forms.Label disLbl;
+        private System.Windows.Forms.Label histLbl;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

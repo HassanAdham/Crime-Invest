@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
+using System.Windows;
 
 namespace WindowsFormsApp2
 {
@@ -109,6 +110,7 @@ namespace WindowsFormsApp2
             return list;
         }
     }
+
     [Serializable]
     [XmlRoot("InvolvedPeople")]
     public class IPeople
@@ -127,6 +129,19 @@ namespace WindowsFormsApp2
 
         [XmlElement("IPDisputes")]
         public bool IP_disp { set; get; }
+
+        [XmlElement("Image")]
+        public Byte[] Image { set; get; }
+
+        public IPeople()
+        {
+            IP_id = "";
+            IP_name = "";
+            IP_locatoin = "";
+            IP_age = 0;
+            IP_disp = false;
+            Image = null;
+        }
 
         public void write()
         {
@@ -158,6 +173,15 @@ namespace WindowsFormsApp2
             list = (List<IPeople>)ser.Deserialize(fs);
             fs.Close();
             return list;
+        }
+
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
         }
 
     }

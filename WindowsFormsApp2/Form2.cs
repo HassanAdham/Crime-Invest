@@ -15,6 +15,7 @@ namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
     {
+        string imgloc;
         Officer o=new Officer();
         Crime c = new Crime();
         CrimeType cT = new CrimeType();
@@ -175,8 +176,8 @@ namespace WindowsFormsApp2
             panel2.Visible = false;
             panel3.Visible = false;
             TypesButton.IsTab = true;
-            ManageButton.IsTab = false;
-            CrimesButton.IsTab = false;
+            //ManageButton.IsTab = false;
+            //CrimesButton.IsTab = false;
         }
 
         private void ManageButton_Click(object sender, EventArgs e)
@@ -185,8 +186,8 @@ namespace WindowsFormsApp2
             panel2.Visible = true;
             panel3.Visible = false;
             ManageButton.IsTab = true;
-            TypesButton.IsTab = false;
-            CrimesButton.IsTab = false;
+            //TypesButton.IsTab = false;
+            //CrimesButton.IsTab = false;
         }
 
         private void CrimesButton_Click(object sender, EventArgs e)
@@ -194,8 +195,8 @@ namespace WindowsFormsApp2
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = true;
-            ManageButton.IsTab = false;
-            TypesButton.IsTab = false;
+            //ManageButton.IsTab = false;
+            //TypesButton.IsTab = false;
             CrimesButton.IsTab = true;
         }
 
@@ -294,7 +295,7 @@ namespace WindowsFormsApp2
             people.IP_age = Int32.Parse(ageCmbo.Text);
             people.IP_locatoin = locationCmbo.Text;
             string boolean2 = disputesCmbo.Text;
-            if (boolean2 == "true")
+            if (boolean2 == "Yes")
             {
                 people.IP_disp = true;
             }
@@ -302,7 +303,9 @@ namespace WindowsFormsApp2
             {
                 people.IP_disp = false;
             }
-
+            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            people.Image = br.ReadBytes((int)fs.Length);
             iplist = people.read();
             people.IP_id = iplist.Count.ToString();
             people.write();
@@ -314,6 +317,40 @@ namespace WindowsFormsApp2
             ageCmbo.ResetText();
             locationCmbo.ResetText();
             disputesCmbo.ResetText();
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doneBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addimgBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*";
+                dlg.Title = "Select Employee Picture";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    imgloc = dlg.FileName.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void selectCmbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

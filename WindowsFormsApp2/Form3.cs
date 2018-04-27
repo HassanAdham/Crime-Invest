@@ -19,51 +19,28 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void CrimeTypesTab_CheckedChanged(object sender, EventArgs e)
-        {
-            //if(CrimeTypesTab.Checked)
-            {
-                panel1.Visible = true;
-                panel2.Visible = false;
-            }
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-            if (radioButton1.Checked)
-            {
-                panel1.Visible = false;
-                panel2.Visible = true;
-            }
-        }
-
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                panel1.Visible = true;
-                panel2.Visible = false;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                panel1.Visible = false;
-                panel2.Visible = true;
-            }
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void solveBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            panel2.Visible = false;
+            solveBtn.IsTab = true;
+        }
+
+        private void ManageButton_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = true;
+            ManageButton.IsTab = true;
         }
     }
 }
