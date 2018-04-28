@@ -185,6 +185,7 @@ namespace WindowsFormsApp2
         }
 
     }
+
     [Serializable]
     [XmlRoot("Admin")]
     public class Admin
@@ -260,10 +261,15 @@ namespace WindowsFormsApp2
 
         [XmlElement("OfficerId")]
         public string C_offId { set; get; }
+
+        [XmlElement("SceneImages")]
+        public List<Byte[]> C_Imgs { set; get; }
+
         public Crime()
         {
             C_item = new List<string>();
             C_IP = new List<IPeople>();
+            C_Imgs = new List<byte[]>();
         }
 
         public void write()

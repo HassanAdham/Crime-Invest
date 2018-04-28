@@ -145,6 +145,12 @@ namespace WindowsFormsApp2
             CrimesButton.IsTab = true;
 
             radioButton6.Checked = true;
+            c.read();
+            if(c.C_Imgs.Count > 0)
+            {
+                MemoryStream ms = new MemoryStream(c.C_Imgs[0]);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
         }
 
         private void BtnMenu_Click(object sender, EventArgs e)
@@ -198,9 +204,11 @@ namespace WindowsFormsApp2
             {
                 people.IP_disp = false;
             }
-            //FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-            //BinaryReader br = new BinaryReader(fs);
-            //people.Image = br.ReadBytes((int)fs.Length);
+
+            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            people.Image = br.ReadBytes((int)fs.Length);
+
             iplist = people.read();
             people.IP_id = iplist.Count.ToString();
             people.write();
@@ -829,7 +837,77 @@ namespace WindowsFormsApp2
 
         private void button9_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*";
+                dlg.Title = "Select Employee Picture";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    imgloc = dlg.FileName.ToString();
+                }
+                byte[] sceneimg = null;
+                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                sceneimg = br.ReadBytes((int)fs.Length);
+                c.C_Imgs.Add(sceneimg);
+                c.write();
+                if(c.C_Imgs.Count == 1)
+                {
+                    MemoryStream ms = new MemoryStream(sceneimg);
+                    pictureBox1.Image = Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            c.read();
+            MemoryStream ms = new MemoryStream();
+            for(int i = 0; i<c.C_Imgs.Count; i++)
+            {
+                ms = new MemoryStream(c.C_Imgs[i]);
+                PictureBox test = new PictureBox();
+                test.Image = Image.FromStream(ms);
+                if(c.C_Imgs.Count == i+1)
+                {
+                    MessageBox.Show("This is the lase photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                }
+                else if(test.Image == pictureBox1.Image && i+1!=c.C_Imgs.Count)
+                {
+                    ms = new MemoryStream(c.C_Imgs[i + 1]);
+                    pictureBox1.Image = Image.FromStream(ms);
+                    break;
+                }
+            }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            c.read();
+            MemoryStream ms = new MemoryStream();
+            for (int i = 0; i < c.C_Imgs.Count; i++)
+            {
+                ms = new MemoryStream(c.C_Imgs[i]);
+                PictureBox test = new PictureBox();
+                test.Image = Image.FromStream(ms);
+                if (c.C_Imgs.Count >= i + 1)
+                {
+                    MessageBox.Show("This is the lase photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                }
+                else if (test.Image == pictureBox1.Image && i + 1 < c.C_Imgs.Count)
+                {
+                    ms = new MemoryStream(c.C_Imgs[i + 1]);
+                    pictureBox1.Image = Image.FromStream(ms);
+                    break;
+                }
+            }
         }
     }
 }

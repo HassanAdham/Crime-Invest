@@ -42,5 +42,10 @@ namespace WindowsFormsApp2
             panel2.Visible = true;
             ManageButton.IsTab = true;
         }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -454,6 +454,7 @@
             this.comboBox6.Size = new System.Drawing.Size(165, 25);
             this.comboBox6.TabIndex = 7;
             this.comboBox6.Text = "Name";
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // comboBox2
             // 
