@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation12 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation11 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation16 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation15 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -57,9 +57,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.addimgBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.disputesCmbo = new System.Windows.Forms.ComboBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.locationCmbo = new System.Windows.Forms.ComboBox();
@@ -83,7 +80,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -93,6 +89,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -112,11 +109,10 @@
             this.panel1.Controls.Add(this.button1);
             this.LogoAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(52, 137);
+            this.panel1.Location = new System.Drawing.Point(622, 119);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 430);
             this.panel1.TabIndex = 3;
-            this.panel1.Visible = false;
             // 
             // listBox1
             // 
@@ -196,9 +192,6 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.addimgBtn);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.disputesCmbo);
             this.panel2.Controls.Add(this.comboBox9);
             this.panel2.Controls.Add(this.locationCmbo);
@@ -214,7 +207,7 @@
             this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(41, 59);
+            this.panel2.Location = new System.Drawing.Point(41, 195);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(686, 430);
             this.panel2.TabIndex = 4;
@@ -238,6 +231,7 @@
             this.radioButton4.Text = "Update";
             this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton4.UseVisualStyleBackColor = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -257,6 +251,7 @@
             this.radioButton5.Text = "Delete";
             this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton5.UseVisualStyleBackColor = false;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -523,42 +518,6 @@
             this.addimgBtn.Text = "Add photo";
             this.addimgBtn.UseVisualStyleBackColor = false;
             this.addimgBtn.Click += new System.EventHandler(this.addimgBtn_Click);
-            // 
-            // button4
-            // 
-            this.PanelAnimator.SetDecoration(this.button4, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button4, BunifuAnimatorNS.DecorationType.None);
-            this.button4.Location = new System.Drawing.Point(334, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "update";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.PanelAnimator.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
-            this.button3.Location = new System.Drawing.Point(415, 70);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "dlt";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.PanelAnimator.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.button2.Location = new System.Drawing.Point(238, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // disputesCmbo
             // 
@@ -983,22 +942,22 @@
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.PanelAnimator.Cursor = null;
-            animation12.AnimateOnlyDifferences = true;
-            animation12.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.BlindCoeff")));
-            animation12.LeafCoeff = 0F;
-            animation12.MaxTime = 1F;
-            animation12.MinTime = 0F;
-            animation12.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicCoeff")));
-            animation12.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicShift")));
-            animation12.MosaicSize = 0;
-            animation12.Padding = new System.Windows.Forms.Padding(0);
-            animation12.RotateCoeff = 0F;
-            animation12.RotateLimit = 0F;
-            animation12.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.ScaleCoeff")));
-            animation12.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.SlideCoeff")));
-            animation12.TimeCoeff = 0F;
-            animation12.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation12;
+            animation16.AnimateOnlyDifferences = true;
+            animation16.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.BlindCoeff")));
+            animation16.LeafCoeff = 0F;
+            animation16.MaxTime = 1F;
+            animation16.MinTime = 0F;
+            animation16.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicCoeff")));
+            animation16.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicShift")));
+            animation16.MosaicSize = 0;
+            animation16.Padding = new System.Windows.Forms.Padding(0);
+            animation16.RotateCoeff = 0F;
+            animation16.RotateLimit = 0F;
+            animation16.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.ScaleCoeff")));
+            animation16.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.SlideCoeff")));
+            animation16.TimeCoeff = 0F;
+            animation16.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation16;
             // 
             // comboBox6
             // 
@@ -1017,18 +976,6 @@
             this.comboBox6.TabIndex = 9;
             this.comboBox6.Text = "Select Officer";
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
-            // 
-            // button8
-            // 
-            this.PanelAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
-            this.button8.Location = new System.Drawing.Point(430, 140);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "update";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // pictureBox3
             // 
@@ -1060,6 +1007,7 @@
             this.radioButton1.Text = "Add";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -1079,6 +1027,7 @@
             this.radioButton2.Text = "Delete";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // bunifuMetroTextbox1
             // 
@@ -1111,13 +1060,13 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(38, 208);
+            this.button7.Location = new System.Drawing.Point(40, 259);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 42);
             this.button7.TabIndex = 2;
             this.button7.Text = "Add";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button1_Click);
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // bunifuMetroTextbox2
             // 
@@ -1160,10 +1109,12 @@
             this.radioButton3.Text = "Update";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.Controls.Add(this.bunifuMetroTextbox3);
             this.panel3.Controls.Add(this.radioButton3);
             this.panel3.Controls.Add(this.bunifuMetroTextbox2);
             this.panel3.Controls.Add(this.button7);
@@ -1171,11 +1122,10 @@
             this.panel3.Controls.Add(this.radioButton2);
             this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.comboBox6);
             this.LogoAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Location = new System.Drawing.Point(772, 137);
+            this.panel3.Location = new System.Drawing.Point(195, 138);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(686, 430);
             this.panel3.TabIndex = 5;
@@ -1186,22 +1136,43 @@
             // 
             this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.LogoAnimator.Cursor = null;
-            animation11.AnimateOnlyDifferences = true;
-            animation11.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.BlindCoeff")));
-            animation11.LeafCoeff = 0F;
-            animation11.MaxTime = 1F;
-            animation11.MinTime = 0F;
-            animation11.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicCoeff")));
-            animation11.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicShift")));
-            animation11.MosaicSize = 0;
-            animation11.Padding = new System.Windows.Forms.Padding(0);
-            animation11.RotateCoeff = 0F;
-            animation11.RotateLimit = 0F;
-            animation11.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.ScaleCoeff")));
-            animation11.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.SlideCoeff")));
-            animation11.TimeCoeff = 0F;
-            animation11.TransparencyCoeff = 0F;
-            this.LogoAnimator.DefaultAnimation = animation11;
+            animation15.AnimateOnlyDifferences = true;
+            animation15.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.BlindCoeff")));
+            animation15.LeafCoeff = 0F;
+            animation15.MaxTime = 1F;
+            animation15.MinTime = 0F;
+            animation15.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicCoeff")));
+            animation15.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicShift")));
+            animation15.MosaicSize = 0;
+            animation15.Padding = new System.Windows.Forms.Padding(0);
+            animation15.RotateCoeff = 0F;
+            animation15.RotateLimit = 0F;
+            animation15.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.ScaleCoeff")));
+            animation15.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.SlideCoeff")));
+            animation15.TimeCoeff = 0F;
+            animation15.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation15;
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.bunifuMetroTextbox3.BorderThickness = 3;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox3, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(40, 208);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(221, 44);
+            this.bunifuMetroTextbox3.TabIndex = 28;
+            this.bunifuMetroTextbox3.Text = "Password";
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Form2
             // 
@@ -1213,8 +1184,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LogoutButton);
-            this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panel1);
             this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -1250,9 +1221,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addimgBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox officerCmbo;
         private System.Windows.Forms.ComboBox statusCmbo;
         private System.Windows.Forms.ComboBox areaCmbo;
@@ -1291,7 +1259,6 @@
         private System.Windows.Forms.Button doneBtn;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -1300,5 +1267,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
     }
 }

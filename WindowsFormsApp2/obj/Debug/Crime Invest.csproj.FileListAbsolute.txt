@@ -24,3 +24,4 @@ E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CoreCompile
 E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csproj.CopyComplete
 E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\hazem\Crime-Invest\WindowsFormsApp2\obj\Debug\Crime Invest.csprojResolveAssemblyReference.cache

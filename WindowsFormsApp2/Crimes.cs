@@ -72,9 +72,6 @@ namespace WindowsFormsApp2
         [XmlElement("#assigCrime")]
         public int assigNum { set; get; }
 
-        [XmlElement("CrimeList")]
-        public List<Crime> O_Clist { set; get; }
-
         [XmlElement("Password")]
         public string O_Password { set; get; }
 
@@ -126,6 +123,9 @@ namespace WindowsFormsApp2
 
         [XmlElement("Age")]
         public int IP_age { set; get; }
+
+        [XmlElement("PastHistory")]
+        public string Pasthist { set; get; }
 
         [XmlElement("IPDisputes")]
         public bool IP_disp { set; get; }

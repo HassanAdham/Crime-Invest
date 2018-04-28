@@ -3,7 +3,7 @@
   <Officer>
     <OfficerId>12345</OfficerId>
     <OfficerName>Khaled</OfficerName>
-    <_x0023_assigCrime>0</_x0023_assigCrime>
+    <_x0023_assigCrime>1</_x0023_assigCrime>
     <Password>123456</Password>
   </Officer>
 </ArrayOfOfficer>

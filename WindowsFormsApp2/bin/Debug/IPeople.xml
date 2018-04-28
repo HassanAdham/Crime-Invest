@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfIPeople xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IPeople>
+    <IPid>0</IPid>
+    <IPName>hassan</IPName>
+    <IPLocation>Giza</IPLocation>
+    <Age>19</Age>
+    <PastHistory>Drug</PastHistory>
+    <IPDisputes>true</IPDisputes>
+  </IPeople>
+  <IPeople>
+    <IPid>1</IPid>
+    <IPName>ahmed</IPName>
+    <IPLocation>Cairo</IPLocation>
+    <Age>23</Age>
+    <PastHistory>Drug</PastHistory>
+    <IPDisputes>true</IPDisputes>
+  </IPeople>
+  <IPeople>
+    <IPid>2</IPid>
+    <IPName>hazem</IPName>
+    <IPLocation>Giza</IPLocation>
+    <Age>19</Age>
+    <PastHistory>Drug</PastHistory>
+    <IPDisputes>true</IPDisputes>
+  </IPeople>
+</ArrayOfIPeople>
