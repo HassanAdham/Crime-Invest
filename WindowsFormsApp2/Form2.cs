@@ -103,7 +103,7 @@ namespace WindowsFormsApp2
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -126,28 +126,25 @@ namespace WindowsFormsApp2
             panel2.Visible = false;
             panel3.Visible = false;
             TypesButton.IsTab = true;
-            //ManageButton.IsTab = false;
-            //CrimesButton.IsTab = false;
         }
 
         private void ManageButton_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            panel2.Visible = true;
-            panel3.Visible = false;
+            panel3.Visible = true;
+            panel2.Visible = false;
             ManageButton.IsTab = true;
-            //TypesButton.IsTab = false;
-            //CrimesButton.IsTab = false;
+            radioButton1.Checked = true;
         }
 
         private void CrimesButton_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = true;
-            //ManageButton.IsTab = false;
-            //TypesButton.IsTab = false;
+            panel3.Visible = false;
+            panel2.Visible = true;
             CrimesButton.IsTab = true;
+
+            radioButton6.Checked = true;
         }
 
         private void BtnMenu_Click(object sender, EventArgs e)
@@ -168,24 +165,6 @@ namespace WindowsFormsApp2
                 BtnMenu.Location = new Point(7, 5);
                 PanelAnimator.ShowSync(SideMenu);
                 LogoAnimator.ShowSync(BtnMenu);
-            }
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Add crime type")
-            {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.White;
-            }
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Add crime type";
-                textBox1.ForeColor = Color.White;
             }
         }
 
@@ -239,6 +218,51 @@ namespace WindowsFormsApp2
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
             doneBtn.Text = "Add";
+            if (radioButton6.Checked)
+            {
+                radioButton6.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton6.ForeColor = Color.White;
+
+                radioButton5.BackColor = Color.DarkGray;
+                radioButton5.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton4.BackColor = Color.DarkGray;
+                radioButton4.ForeColor = Color.FromArgb(67, 72, 76);
+
+                selectCmbo.Visible = false;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                label8.Visible = true;
+                ageCmbo.Visible = true;
+                areaCmbo.Visible = true;
+                disputesCmbo.Visible = true;
+                locationCmbo.Visible = true;
+                officerCmbo.Visible = true;
+                statusCmbo.Visible = true;
+                typeCmbo.Visible = true;
+                comboBox9.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                doneBtn.Visible = true;
+                backBtn.Visible = true;
+                nextBtn.Visible = true;
+                button9.Visible = true;
+                addimgBtn.Visible = true;
+                button5.Visible = true;
+                button6.Visible = true;
+                pictureBox1.Visible = true;
+
+            }
+            else
+            {
+                radioButton6.BackColor = Color.DarkGray;
+                radioButton6.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void doneBtn_Click(object sender, EventArgs e)
@@ -441,26 +465,187 @@ namespace WindowsFormsApp2
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             doneBtn.Text = "Delete";
+            if (radioButton5.Checked)
+            {
+                radioButton5.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton5.ForeColor = Color.White;
+
+                radioButton6.BackColor = Color.DarkGray;
+                radioButton6.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton4.BackColor = Color.DarkGray;
+                radioButton4.ForeColor = Color.FromArgb(67, 72, 76);
+
+                selectCmbo.Visible = true;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label7.Visible = false;
+                label8.Visible = false;
+                ageCmbo.Visible = false;
+                areaCmbo.Visible = false;
+                disputesCmbo.Visible = false;
+                locationCmbo.Visible = false;
+                officerCmbo.Visible = false;
+                statusCmbo.Visible = false;
+                typeCmbo.Visible = false;
+                comboBox9.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                doneBtn.Visible = true;
+                backBtn.Visible = false;
+                nextBtn.Visible = false;
+                button9.Visible = false;
+                addimgBtn.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                pictureBox1.Visible = false;
+            }
+            else
+            {
+                radioButton5.BackColor = Color.DarkGray;
+                radioButton5.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             doneBtn.Text = "Update";
+            if (radioButton4.Checked)
+            {
+                radioButton4.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton4.ForeColor = Color.White;
+
+                radioButton5.BackColor = Color.DarkGray;
+                radioButton5.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton6.BackColor = Color.DarkGray;
+                radioButton6.ForeColor = Color.FromArgb(67, 72, 76);
+
+                selectCmbo.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                label8.Visible = true;
+                ageCmbo.Visible = true;
+                areaCmbo.Visible = true;
+                disputesCmbo.Visible = true;
+                locationCmbo.Visible = true;
+                officerCmbo.Visible = true;
+                statusCmbo.Visible = true;
+                typeCmbo.Visible = true;
+                comboBox9.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                doneBtn.Visible = true;
+                backBtn.Visible = true;
+                nextBtn.Visible = true;
+                button9.Visible = true;
+                addimgBtn.Visible = true;
+                button5.Visible = true;
+                button6.Visible = true;
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                radioButton4.BackColor = Color.DarkGray;
+                radioButton4.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             button7.Text = "Add";
+            if (radioButton1.Checked)
+            {
+                radioButton1.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton1.ForeColor = Color.White;
+
+                radioButton2.BackColor = Color.DarkGray;
+                radioButton2.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton3.BackColor = Color.DarkGray;
+                radioButton3.ForeColor = Color.FromArgb(67, 72, 76);
+
+                comboBox6.Visible = false;
+                bunifuMetroTextbox1.Visible = true;
+                bunifuMetroTextbox2.Visible = true;
+                bunifuMetroTextbox3.Visible = true;
+                bunifuMetroTextbox1.Location = new Point(40, 69);
+                bunifuMetroTextbox2.Location = new Point(40, 121);
+                bunifuMetroTextbox3.Location = new Point(40, 172);
+                button7.Location = new Point(42, 223);
+
+            }
+            else
+            {
+                radioButton1.BackColor = Color.DarkGray;
+                radioButton1.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             button7.Text = "Delete";
+            if (radioButton2.Checked)
+            {
+                radioButton2.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton2.ForeColor = Color.White;
+
+                radioButton1.BackColor = Color.DarkGray;
+                radioButton1.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton3.BackColor = Color.DarkGray;
+                radioButton3.ForeColor = Color.FromArgb(67, 72, 76);
+
+                comboBox6.Visible = true;
+                bunifuMetroTextbox1.Visible = false;
+                bunifuMetroTextbox2.Visible = false;
+                bunifuMetroTextbox3.Visible = false;
+                button7.Location = new Point(40, 105);
+            }
+            else
+            {
+                radioButton2.BackColor = Color.DarkGray;
+                radioButton2.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             button7.Text = "Update";
+            if (radioButton3.Checked)
+            {
+                radioButton3.BackColor = Color.FromArgb(46, 12, 14);
+                radioButton3.ForeColor = Color.White;
+
+                radioButton2.BackColor = Color.DarkGray;
+                radioButton2.ForeColor = Color.FromArgb(67, 72, 76);
+
+                radioButton1.BackColor = Color.DarkGray;
+                radioButton1.ForeColor = Color.FromArgb(67, 72, 76);
+
+                comboBox6.Visible = true;
+                bunifuMetroTextbox1.Visible = true;
+                bunifuMetroTextbox2.Visible = true;
+                bunifuMetroTextbox3.Visible = true;
+                button7.Location = new Point(40, 259);
+                bunifuMetroTextbox1.Location = new Point(38, 105);
+                bunifuMetroTextbox2.Location = new Point(38, 157);
+                bunifuMetroTextbox3.Location = new Point(38, 208);
+            }
+            else
+            {
+                radioButton3.BackColor = Color.DarkGray;
+                radioButton3.ForeColor = Color.FromArgb(67, 72, 76);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -527,5 +712,125 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Updated");
             }
         }
+
+        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMetroTextbox2_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox2.Text == "No. of assigned crimes")
+            {
+                bunifuMetroTextbox2.Text = "";
+                bunifuMetroTextbox2.ForeColor = Color.White;
+            }
+        }
+
+        private void bunifuMetroTextbox2_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox2.Text == "")
+            {
+                bunifuMetroTextbox2.Text = "No. of assigned crimes";
+                bunifuMetroTextbox2.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void bunifuMetroTextbox3_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox3.Text == "Password")
+            {
+                bunifuMetroTextbox3.Text = "";
+                bunifuMetroTextbox3.ForeColor = Color.White;
+                bunifuMetroTextbox3.isPassword = true;
+            }
+        }
+
+        private void bunifuMetroTextbox3_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox3.Text == "")
+            {
+                bunifuMetroTextbox3.Text = "Password";
+                bunifuMetroTextbox3.ForeColor = Color.DarkGray;
+                bunifuMetroTextbox3.isPassword = false;
+            }
+        }
+
+        private void radioButton1_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void radioButton2_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void radioButton3_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void bunifuMetroTextbox3_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMetroTextbox2_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMetroTextbox1_Enter(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox1.Text == "Officer Name")
+            {
+                bunifuMetroTextbox1.Text = "";
+                bunifuMetroTextbox1.ForeColor = Color.White;
+            }
+        }
+
+        private void bunifuMetroTextbox1_Leave(object sender, EventArgs e)
+        {
+            if (bunifuMetroTextbox1.Text == "")
+            {
+                bunifuMetroTextbox1.Text = "Officer Name";
+                bunifuMetroTextbox1.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Add crime type")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.White;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Add crime type";
+                textBox1.ForeColor = Color.DarkGray;
+            }
+
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            Form1 s = new Form1();
+            this.Hide();
+            s.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

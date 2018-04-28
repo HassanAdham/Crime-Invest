@@ -16,4 +16,8 @@
     <TypeId>3</TypeId>
     <TypeName>Fraud</TypeName>
   </CrimeType>
+  <CrimeType>
+    <TypeId>4</TypeId>
+    <TypeName>Add crime type</TypeName>
+  </CrimeType>
 </ArrayOfCrimeType>
