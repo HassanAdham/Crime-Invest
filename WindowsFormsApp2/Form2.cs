@@ -80,6 +80,8 @@ namespace WindowsFormsApp2
                 if (!LCT.Contains(CT))
                     LCT.Add(CT);
                 listBox1.Items.Add(CT.T_name);
+                comboBox9.Items.Add(CT.T_name);
+                listBox1.Items.Add(CT.T_name);
             }
             else
             {
@@ -323,6 +325,7 @@ namespace WindowsFormsApp2
                 ser.Serialize(FS, LO);
                 FS.Close();
                 crime.C_IP = ipl;
+                ipl.Clear();
                 crime.write();
                 MessageBox.Show("Added");
                 if (!LC.Contains(crime))
@@ -420,11 +423,24 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Updated");
             }
             officerCmbo.Items.Clear();
+            comboBox6.Items.Clear();
+            selectCmbo.Items.Clear();
+
             for (int i = 0; i < LO.Count; i++)
             {
                 if (LO[i].assigNum < 10)
                     officerCmbo.Items.Add(LO[i].O_id);
             }
+            for (int i = 0; i < LO.Count; i++)
+            {
+                comboBox6.Items.Add(LO[i].O_id);
+            }
+
+            for (int i = 0; i < LC.Count; i++)
+            {
+                selectCmbo.Items.Add(LC[i].C_id);
+            }
+
         }
 
         private void addimgBtn_Click(object sender, EventArgs e)
