@@ -26,6 +26,7 @@ namespace WindowsFormsApp2
         List<IPeople> iplist = new List<IPeople>();
         List<IPeople> ipl = new List<IPeople>();
         Admin admin = new Admin();
+        List<string> itemsFound = new List<string>();
         public Form2(Admin a)
         {
             admin = a;
@@ -312,12 +313,7 @@ namespace WindowsFormsApp2
                     crime.C_Stat = false;
                 }
                 crime.C_desc = textBox2.Text;
-                string str = textBox3.Text;
-                string[] arr = str.Split('-');
-                for (int i = 0; i < crime.C_item.Count; i++)
-                {
-                    crime.C_item.Add(arr[i]);
-                }
+                crime.C_item = itemsFound;
                 FileStream FS = new FileStream("Officer.xml", FileMode.Truncate);
                 FS.Close();
                 FS = new FileStream("Officer.xml", FileMode.Append);
@@ -326,6 +322,7 @@ namespace WindowsFormsApp2
                 FS.Close();
                 crime.C_IP = ipl;
                 ipl.Clear();
+                itemsFound.Clear();
                 crime.write();
                 MessageBox.Show("Added");
                 if (!LC.Contains(crime))
@@ -395,6 +392,10 @@ namespace WindowsFormsApp2
                                 LO[j].assigNum--;
                             }
                         }
+                        for (int j = 0; j < itemsFound.Count; j++)
+                        {
+                            LC[i].C_item.Add(itemsFound[j]);
+                        }
                         LC[i].C_offId = officerCmbo.Text;
                         for(int j=0; j < LO.Count; j++)
                         {
@@ -404,6 +405,8 @@ namespace WindowsFormsApp2
                             }
                         }
                         LC[i].C_Area = areaCmbo.Text;
+                        ipl.Clear();
+                        itemsFound.Clear();
                         break;
                     }
                 }
@@ -924,6 +927,12 @@ namespace WindowsFormsApp2
                     break;
                 }
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            itemsFound.Add(textBox3.Text);
+            textBox3.ResetText();
         }
     }
 }
