@@ -376,5 +376,38 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            Form1 s = new Form1();
+            this.Hide();
+            s.Show();
+        }
+
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+            if (SideMenu.Width == 35)
+            {
+                SideMenu.Visible = false;
+                SideMenu.Width = 135;
+                BtnMenu.Location = new Point(108, 5);
+                PanelAnimator.ShowSync(SideMenu);
+                LogoAnimator.ShowSync(BtnMenu);
+            }
+            else
+            {
+
+                SideMenu.Visible = false;
+                SideMenu.Width = 35;
+                BtnMenu.Location = new Point(7, 5);
+                PanelAnimator.ShowSync(SideMenu);
+                LogoAnimator.ShowSync(BtnMenu);
+            }
+        }
     }
 }

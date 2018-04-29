@@ -76,11 +76,13 @@ namespace WindowsFormsApp2
                 if (isA)
                 {
                     Form2 form2 = new Form2(admin);
+                    this.Hide();
                     form2.Show();
                 }
                 else if (isO)
                 {
                     Form3 form3 = new Form3(officer);
+                    this.Hide();
                     form3.Show();
                 }
                 else

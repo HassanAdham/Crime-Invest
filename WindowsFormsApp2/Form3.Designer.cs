@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.doneBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +71,8 @@
             this.ManageButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.solveBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnMenu = new System.Windows.Forms.PictureBox();
+            this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,10 +85,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.doneBtn);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.selectCmbo);
-            this.panel1.Location = new System.Drawing.Point(41, 490);
+            this.PanelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Location = new System.Drawing.Point(35, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 430);
             this.panel1.TabIndex = 2;
@@ -92,6 +101,9 @@
             // doneBtn
             // 
             this.doneBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.doneBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.doneBtn, BunifuAnimatorNS.DecorationType.None);
             this.doneBtn.FlatAppearance.BorderSize = 0;
             this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.doneBtn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,19 +118,25 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(296, 184);
+            this.label2.Location = new System.Drawing.Point(185, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 22);
+            this.label2.Size = new System.Drawing.Size(316, 22);
             this.label2.TabIndex = 15;
             this.label2.Text = "Crime Type";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Visible = false;
             // 
             // selectCmbo
             // 
             this.selectCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.selectCmbo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.selectCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.selectCmbo, BunifuAnimatorNS.DecorationType.None);
             this.selectCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -132,6 +150,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Salmon;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.histLbl);
@@ -157,7 +177,9 @@
             this.panel2.Controls.Add(this.itemsCmbo);
             this.panel2.Controls.Add(this.comboBox6);
             this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Location = new System.Drawing.Point(41, 54);
+            this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(35, 50);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(686, 430);
             this.panel2.TabIndex = 3;
@@ -165,6 +187,9 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +206,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(27, 231);
@@ -193,6 +220,8 @@
             // 
             this.histLbl.AutoSize = true;
             this.histLbl.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.histLbl, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.histLbl, BunifuAnimatorNS.DecorationType.None);
             this.histLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.histLbl.ForeColor = System.Drawing.Color.White;
             this.histLbl.Location = new System.Drawing.Point(194, 347);
@@ -205,6 +234,8 @@
             // 
             this.disLbl.AutoSize = true;
             this.disLbl.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.disLbl, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.disLbl, BunifuAnimatorNS.DecorationType.None);
             this.disLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disLbl.ForeColor = System.Drawing.Color.White;
             this.disLbl.Location = new System.Drawing.Point(194, 330);
@@ -217,6 +248,8 @@
             // 
             this.locationLbl.AutoSize = true;
             this.locationLbl.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.locationLbl, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.locationLbl, BunifuAnimatorNS.DecorationType.None);
             this.locationLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLbl.ForeColor = System.Drawing.Color.White;
             this.locationLbl.Location = new System.Drawing.Point(194, 313);
@@ -229,6 +262,8 @@
             // 
             this.ageLbl.AutoSize = true;
             this.ageLbl.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.ageLbl, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.ageLbl, BunifuAnimatorNS.DecorationType.None);
             this.ageLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageLbl.ForeColor = System.Drawing.Color.White;
             this.ageLbl.Location = new System.Drawing.Point(194, 296);
@@ -241,6 +276,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(193, 243);
@@ -252,6 +289,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,6 +306,8 @@
             // 
             // pictureBox3
             // 
+            this.LogoAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(376, 268);
             this.pictureBox3.Name = "pictureBox3";
@@ -276,6 +318,8 @@
             // 
             // pictureBox1
             // 
+            this.LogoAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(187, 45);
             this.pictureBox1.Name = "pictureBox1";
@@ -287,6 +331,9 @@
             // nextBtn
             // 
             this.nextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.nextBtn, BunifuAnimatorNS.DecorationType.None);
             this.nextBtn.FlatAppearance.BorderSize = 0;
             this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextBtn.ForeColor = System.Drawing.Color.White;
@@ -301,6 +348,9 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,6 +366,9 @@
             // backBtn
             // 
             this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.backBtn, BunifuAnimatorNS.DecorationType.None);
             this.backBtn.FlatAppearance.BorderSize = 0;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.ForeColor = System.Drawing.Color.White;
@@ -331,6 +384,8 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LogoAnimator.SetDecoration(this.textBox2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.textBox2, BunifuAnimatorNS.DecorationType.None);
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(488, 73);
             this.textBox2.Multiline = true;
@@ -342,6 +397,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(484, 47);
@@ -354,6 +411,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(27, 168);
@@ -366,6 +425,8 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(27, 109);
@@ -378,6 +439,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.LogoAnimator.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(27, 53);
@@ -389,6 +452,9 @@
             // statusCmbo
             // 
             this.statusCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.statusCmbo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.statusCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.statusCmbo, BunifuAnimatorNS.DecorationType.None);
             this.statusCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statusCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.statusCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -404,6 +470,9 @@
             // areaCmbo
             // 
             this.areaCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.areaCmbo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.areaCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.areaCmbo, BunifuAnimatorNS.DecorationType.None);
             this.areaCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.areaCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.areaCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -416,6 +485,9 @@
             // typeCmbo
             // 
             this.typeCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.typeCmbo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.typeCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.typeCmbo, BunifuAnimatorNS.DecorationType.None);
             this.typeCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.typeCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.typeCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -429,6 +501,8 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.LightGray;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LogoAnimator.SetDecoration(this.textBox3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.textBox3, BunifuAnimatorNS.DecorationType.None);
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.textBox3.Location = new System.Drawing.Point(31, 287);
@@ -439,6 +513,9 @@
             // itemsCmbo
             // 
             this.itemsCmbo.BackColor = System.Drawing.Color.DarkGray;
+            this.itemsCmbo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.itemsCmbo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.itemsCmbo, BunifuAnimatorNS.DecorationType.None);
             this.itemsCmbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.itemsCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemsCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -451,6 +528,9 @@
             // comboBox6
             // 
             this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.comboBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.comboBox6, BunifuAnimatorNS.DecorationType.None);
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.ForeColor = System.Drawing.Color.White;
@@ -465,6 +545,9 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.comboBox2, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.comboBox2, BunifuAnimatorNS.DecorationType.None);
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -479,16 +562,20 @@
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.LogoAnimator.SetDecoration(this.splitter1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.splitter1, BunifuAnimatorNS.DecorationType.None);
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1282, 50);
+            this.splitter1.Size = new System.Drawing.Size(720, 50);
             this.splitter1.TabIndex = 7;
             this.splitter1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
+            this.LogoAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -501,6 +588,8 @@
             // 
             this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.LogoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.LogoutButton, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.LogoutButton, BunifuAnimatorNS.DecorationType.None);
             this.LogoutButton.FlatAppearance.BorderSize = 0;
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -511,6 +600,7 @@
             this.LogoutButton.TabIndex = 11;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // SideMenu
             // 
@@ -520,10 +610,12 @@
             this.SideMenu.Controls.Add(this.ManageButton);
             this.SideMenu.Controls.Add(this.solveBtn);
             this.SideMenu.Controls.Add(this.BtnMenu);
+            this.PanelAnimator.SetDecoration(this.SideMenu, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.SideMenu, BunifuAnimatorNS.DecorationType.None);
             this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideMenu.Location = new System.Drawing.Point(0, 50);
             this.SideMenu.Name = "SideMenu";
-            this.SideMenu.Size = new System.Drawing.Size(35, 738);
+            this.SideMenu.Size = new System.Drawing.Size(35, 430);
             this.SideMenu.TabIndex = 12;
             // 
             // AboutButton
@@ -534,6 +626,8 @@
             this.AboutButton.BorderRadius = 0;
             this.AboutButton.ButtonText = "About";
             this.AboutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.AboutButton, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.AboutButton, BunifuAnimatorNS.DecorationType.None);
             this.AboutButton.DisabledColor = System.Drawing.Color.Gray;
             this.AboutButton.Iconcolor = System.Drawing.Color.Transparent;
             this.AboutButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("AboutButton.Iconimage")));
@@ -568,6 +662,8 @@
             this.ExitButton.BorderRadius = 0;
             this.ExitButton.ButtonText = "Exit";
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.ExitButton, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.ExitButton, BunifuAnimatorNS.DecorationType.None);
             this.ExitButton.DisabledColor = System.Drawing.Color.Gray;
             this.ExitButton.Iconcolor = System.Drawing.Color.Transparent;
             this.ExitButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("ExitButton.Iconimage")));
@@ -593,6 +689,7 @@
             this.ExitButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ExitButton.Textcolor = System.Drawing.Color.White;
             this.ExitButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // ManageButton
             // 
@@ -602,6 +699,8 @@
             this.ManageButton.BorderRadius = 0;
             this.ManageButton.ButtonText = "Manage";
             this.ManageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.ManageButton, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.ManageButton, BunifuAnimatorNS.DecorationType.None);
             this.ManageButton.DisabledColor = System.Drawing.Color.Gray;
             this.ManageButton.Iconcolor = System.Drawing.Color.Transparent;
             this.ManageButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("ManageButton.Iconimage")));
@@ -637,6 +736,8 @@
             this.solveBtn.BorderRadius = 0;
             this.solveBtn.ButtonText = "Solve";
             this.solveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.solveBtn, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.solveBtn, BunifuAnimatorNS.DecorationType.None);
             this.solveBtn.DisabledColor = System.Drawing.Color.Gray;
             this.solveBtn.Iconcolor = System.Drawing.Color.Transparent;
             this.solveBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("solveBtn.Iconimage")));
@@ -668,6 +769,8 @@
             // 
             this.BtnMenu.BackColor = System.Drawing.Color.Transparent;
             this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.BtnMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.BtnMenu, BunifuAnimatorNS.DecorationType.None);
             this.BtnMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenu.Image")));
             this.BtnMenu.Location = new System.Drawing.Point(7, 9);
             this.BtnMenu.Name = "BtnMenu";
@@ -675,25 +778,69 @@
             this.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnMenu.TabIndex = 19;
             this.BtnMenu.TabStop = false;
+            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
+            // LogoAnimator
+            // 
+            this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.LogoAnimator.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation1;
+            // 
+            // PanelAnimator
+            // 
+            this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.PanelAnimator.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation2;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1282, 788);
+            this.ClientSize = new System.Drawing.Size(720, 480);
             this.Controls.Add(this.SideMenu);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.panel1);
+            this.LogoAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -745,5 +892,7 @@
         private System.Windows.Forms.Label disLbl;
         private System.Windows.Forms.Label histLbl;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private BunifuAnimatorNS.BunifuTransition LogoAnimator;
+        private BunifuAnimatorNS.BunifuTransition PanelAnimator;
     }
 }
