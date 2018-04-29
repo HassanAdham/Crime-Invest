@@ -16,6 +16,9 @@ namespace WindowsFormsApp2
     public partial class Form2 : Form
     {
         string imgloc;
+        Image DefaultImage;
+        List<Byte[]> Imgs = new List<byte[]>();
+        List<Byte[]> ImgsUpdate = new List<byte[]>();
         Officer o=new Officer();
         Crime c = new Crime();
         CrimeType cT = new CrimeType();
@@ -26,14 +29,17 @@ namespace WindowsFormsApp2
         List<IPeople> iplist = new List<IPeople>();
         List<IPeople> ipl = new List<IPeople>();
         Admin admin = new Admin();
+        int count;
         List<string> itemsFound = new List<string>();
         public Form2(Admin a)
         {
+            count = 0;
             admin = a;
             LO = o.read();
             LC = c.read();
             LCT = cT.read();
             InitializeComponent();
+            DefaultImage = pictureBox1.Image;
             for (int i = 0; i < LO.Count; i++)
             {
                 comboBox6.Items.Add(LO[i].O_id);
@@ -82,7 +88,7 @@ namespace WindowsFormsApp2
                     LCT.Add(CT);
                 listBox1.Items.Add(CT.T_name);
                 comboBox9.Items.Add(CT.T_name);
-                listBox1.Items.Add(CT.T_name);
+                typeCmbo.Items.Add(CT.T_name);
             }
             else
             {
@@ -304,7 +310,7 @@ namespace WindowsFormsApp2
                 crime.C_Area = areaCmbo.Text;
 
                 string boolean = statusCmbo.Text;
-                if (boolean == "true")
+                if (boolean == "Opened")
                 {
                     crime.C_Stat = true;
                 }
@@ -314,6 +320,7 @@ namespace WindowsFormsApp2
                 }
                 crime.C_desc = textBox2.Text;
                 crime.C_item = itemsFound;
+                crime.C_Imgs = Imgs;
                 FileStream FS = new FileStream("Officer.xml", FileMode.Truncate);
                 FS.Close();
                 FS = new FileStream("Officer.xml", FileMode.Append);
@@ -321,12 +328,13 @@ namespace WindowsFormsApp2
                 ser.Serialize(FS, LO);
                 FS.Close();
                 crime.C_IP = ipl;
+                crime.write();
+                LC.Add(crime);
                 ipl.Clear();
                 itemsFound.Clear();
-                crime.write();
+                Imgs.Clear();
                 MessageBox.Show("Added");
-                if (!LC.Contains(crime))
-                    LC.Add(crime);
+                
             }
             else if(doneBtn.Text == "Delete")
             {
@@ -377,7 +385,7 @@ namespace WindowsFormsApp2
                         }
                         LC[i].C_desc = textBox2.Text;
                         string b = statusCmbo.Text;
-                        if (b == "true")
+                        if (b == "Opened")
                         {
                             LC[i].C_Stat = true;
                         }
@@ -396,6 +404,14 @@ namespace WindowsFormsApp2
                         {
                             LC[i].C_item.Add(itemsFound[j]);
                         }
+                        for (int j = 0; j < Imgs.Count; j++)
+                        {
+                            LC[i].C_Imgs.Add(Imgs[j]);
+                        }
+                        for (int j = 0; j < ipl.Count; j++)
+                        {
+                            LC[i].C_IP.Add(ipl[j]);
+                        }
                         LC[i].C_offId = officerCmbo.Text;
                         for(int j=0; j < LO.Count; j++)
                         {
@@ -405,8 +421,6 @@ namespace WindowsFormsApp2
                             }
                         }
                         LC[i].C_Area = areaCmbo.Text;
-                        ipl.Clear();
-                        itemsFound.Clear();
                         break;
                     }
                 }
@@ -424,6 +438,9 @@ namespace WindowsFormsApp2
                 ser.Serialize(FS, LC);
                 FS.Close();
                 MessageBox.Show("Updated");
+                ipl.Clear();
+                itemsFound.Clear();
+                Imgs.Clear();
             }
             officerCmbo.Items.Clear();
             comboBox6.Items.Clear();
@@ -487,6 +504,13 @@ namespace WindowsFormsApp2
             statusCmbo.Text = c.C_Stat.ToString();
             officerCmbo.Text = c.C_offId;
             areaCmbo.Text = c.C_Area;
+            ImgsUpdate = c.C_Imgs;
+            count = 0;
+            if (ImgsUpdate.Count != 0)
+            {
+                MemoryStream ms = new MemoryStream(ImgsUpdate[0]);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
@@ -541,6 +565,7 @@ namespace WindowsFormsApp2
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             doneBtn.Text = "Update";
+            pictureBox1.Image = DefaultImage;
             if (radioButton4.Checked)
             {
                 radioButton4.BackColor = Color.FromArgb(46, 12, 14);
@@ -869,13 +894,17 @@ namespace WindowsFormsApp2
                 FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 sceneimg = br.ReadBytes((int)fs.Length);
-                c.C_Imgs.Add(sceneimg);
-                c.write();
-                if(c.C_Imgs.Count == 1)
+                Imgs.Add(sceneimg);
+                if (doneBtn.Text == "Update")
                 {
-                    MemoryStream ms = new MemoryStream(sceneimg);
-                    pictureBox1.Image = Image.FromStream(ms);
+                    ImgsUpdate.Add(sceneimg);
+                    count = ImgsUpdate.Count - 1;
                 }
+                else
+                count = Imgs.Count-1;
+                MemoryStream ms = new MemoryStream(sceneimg);
+                pictureBox1.Image = Image.FromStream(ms);
+                fs.Close();
             }
             catch (Exception ex)
             {
@@ -885,46 +914,60 @@ namespace WindowsFormsApp2
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            c.read();
-            MemoryStream ms = new MemoryStream();
-            for(int i = 0; i<c.C_Imgs.Count; i++)
+            if (Imgs.Count != 0&& doneBtn.Text == "Add")
             {
-                ms = new MemoryStream(c.C_Imgs[i]);
-                PictureBox test = new PictureBox();
-                test.Image = Image.FromStream(ms);
-                if(c.C_Imgs.Count == i+1)
+                if (Imgs.Count-1 == count)
                 {
-                    MessageBox.Show("This is the lase photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    MessageBox.Show("This is the last photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if(test.Image == pictureBox1.Image && i+1!=c.C_Imgs.Count)
+                else
                 {
-                    ms = new MemoryStream(c.C_Imgs[i + 1]);
+                    count++;
+                    MemoryStream ms = new MemoryStream(Imgs[count]);
                     pictureBox1.Image = Image.FromStream(ms);
-                    break;
                 }
             }
+            else if(ImgsUpdate.Count != 0 && doneBtn.Text == "Update")
+            {
+                if (ImgsUpdate.Count -1 == count)
+                {
+                    MessageBox.Show("This is the last photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    count++;
+                    MemoryStream ms = new MemoryStream(ImgsUpdate[count]);
+                    pictureBox1.Image = Image.FromStream(ms);
+                }
+            }   
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            c.read();
-            MemoryStream ms = new MemoryStream();
-            for (int i = 0; i < c.C_Imgs.Count; i++)
+            if (Imgs.Count != 0 && doneBtn.Text == "Add")
             {
-                ms = new MemoryStream(c.C_Imgs[i]);
-                PictureBox test = new PictureBox();
-                test.Image = Image.FromStream(ms);
-                if (c.C_Imgs.Count >= i + 1)
+                if (count == 0)
                 {
-                    MessageBox.Show("This is the lase photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    MessageBox.Show("This is the frist photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (test.Image == pictureBox1.Image && i + 1 < c.C_Imgs.Count)
+                else
                 {
-                    ms = new MemoryStream(c.C_Imgs[i + 1]);
+                    count--;
+                    MemoryStream ms = new MemoryStream(Imgs[count]);
                     pictureBox1.Image = Image.FromStream(ms);
-                    break;
+                }
+            }
+            else if (ImgsUpdate.Count != 0 && doneBtn.Text == "Update")
+            {
+                if (count == 0)
+                {
+                    MessageBox.Show("This is the first photo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    count--;
+                    MemoryStream ms = new MemoryStream(ImgsUpdate[count]);
+                    pictureBox1.Image = Image.FromStream(ms);
                 }
             }
         }

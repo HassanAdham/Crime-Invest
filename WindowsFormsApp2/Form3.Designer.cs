@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.doneBtn);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.selectCmbo);
-            this.panel1.Location = new System.Drawing.Point(107, 538);
+            this.panel1.Location = new System.Drawing.Point(41, 490);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 430);
             this.panel1.TabIndex = 2;
@@ -102,6 +102,7 @@
             this.doneBtn.TabIndex = 16;
             this.doneBtn.Text = "Solve";
             this.doneBtn.UseVisualStyleBackColor = false;
+            this.doneBtn.Click += new System.EventHandler(this.doneBtn_Click);
             // 
             // label2
             // 
@@ -174,6 +175,7 @@
             this.button6.TabIndex = 35;
             this.button6.Text = "Add Item";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label8
             // 
@@ -258,8 +260,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 58);
             this.button1.TabIndex = 32;
-            this.button1.Text = "Done";
+            this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -293,6 +296,7 @@
             this.nextBtn.TabIndex = 28;
             this.nextBtn.Text = ">";
             this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // button9
             // 
@@ -307,6 +311,7 @@
             this.button9.TabIndex = 29;
             this.button9.Text = "Add Image";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // backBtn
             // 
@@ -320,6 +325,7 @@
             this.backBtn.TabIndex = 30;
             this.backBtn.Text = "<";
             this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // textBox2
             // 
@@ -468,6 +474,7 @@
             this.comboBox2.Size = new System.Drawing.Size(133, 25);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "Select Crime ID";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // splitter1
             // 

@@ -256,7 +256,7 @@ namespace WindowsFormsApp2
         [XmlElement("ItemsFound")]
         public List<string> C_item { set; get; }
 
-        [XmlElement("InvolvedPersonID")]
+        [XmlElement("InvolvedPerson")]
         public List<IPeople> C_IP { set; get; }
 
         [XmlElement("OfficerId")]
