@@ -25,7 +25,6 @@ namespace WindowsFormsApp2
         List<Officer> LO = new List<Officer>();
         List<Crime> LC = new List<Crime>();
         List<CrimeType> LCT= new List<CrimeType>();
-        IPeople people = new IPeople();
         List<IPeople> iplist = new List<IPeople>();
         List<IPeople> ipl = new List<IPeople>();
         Admin admin = new Admin();
@@ -107,7 +106,6 @@ namespace WindowsFormsApp2
                 }
             }
             bunifuMetroTextbox1.Text = off.O_name;
-            bunifuMetroTextbox2.Text = off.assigNum.ToString();
             label1.Text = "No. of assigned crimes: " + off.assigNum.ToString();
         }
 
@@ -201,6 +199,7 @@ namespace WindowsFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            IPeople people = new IPeople();
             people.IP_name = textBox4.Text;
             people.IP_age = Int32.Parse(ageCmbo.Text);
             people.IP_locatoin = locationCmbo.Text;
@@ -338,7 +337,7 @@ namespace WindowsFormsApp2
                 XmlSerializer ser = new XmlSerializer(LO.GetType());
                 ser.Serialize(FS, LO);
                 FS.Close();
-
+                pictureBox1.Image = DefaultImage;
                 MessageBox.Show("Added");
                 
             }
@@ -616,6 +615,12 @@ namespace WindowsFormsApp2
                 radioButton4.BackColor = Color.DarkGray;
                 radioButton4.ForeColor = Color.FromArgb(67, 72, 76);
             }
+            LC = c.read();
+            selectCmbo.Items.Clear();
+            for (int i = 0; i < LC.Count; i++)
+            {
+                selectCmbo.Items.Add(LC[i].C_id);
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -634,13 +639,11 @@ namespace WindowsFormsApp2
 
                 comboBox6.Visible = false;
                 bunifuMetroTextbox1.Visible = true;
-                bunifuMetroTextbox2.Visible = true;
                 bunifuMetroTextbox3.Visible = true;
                 label1.Visible = false;
                 bunifuMetroTextbox1.Location = new Point(40, 69);
-                bunifuMetroTextbox2.Location = new Point(40, 121);
-                bunifuMetroTextbox3.Location = new Point(40, 172);
-                button7.Location = new Point(42, 223);
+                bunifuMetroTextbox3.Location = new Point(38, 122);
+                button7.Location = new Point(40, 174);
 
             }
             else
@@ -667,7 +670,6 @@ namespace WindowsFormsApp2
                 comboBox6.Visible = true;
                 bunifuMetroTextbox1.Visible = false;
                 label1.Visible = false;
-                bunifuMetroTextbox2.Visible = false;
                 bunifuMetroTextbox3.Visible = false;
                 button7.Location = new Point(40, 105);
             }
@@ -694,10 +696,10 @@ namespace WindowsFormsApp2
 
                 comboBox6.Visible = true;
                 bunifuMetroTextbox1.Visible = true;
-                bunifuMetroTextbox2.Visible = false;
                 label1.Visible = true;
-                bunifuMetroTextbox3.Visible = true;
-                button7.Location = new Point(40, 259);
+                label1.Location = new Point(40, 157);
+                bunifuMetroTextbox3.Visible = false;
+                button7.Location = new Point(40, 185);
                 label1.Text = "No. of assigned crimes: ";
                 bunifuMetroTextbox1.Location = new Point(38, 105);
                 bunifuMetroTextbox3.Location = new Point(38, 157);
@@ -789,20 +791,10 @@ namespace WindowsFormsApp2
 
         private void bunifuMetroTextbox2_Enter(object sender, EventArgs e)
         {
-            if (bunifuMetroTextbox2.Text == "No. of assigned crimes")
-            {
-                bunifuMetroTextbox2.Text = "";
-                bunifuMetroTextbox2.ForeColor = Color.White;
-            }
         }
 
         private void bunifuMetroTextbox2_Leave(object sender, EventArgs e)
         {
-            if (bunifuMetroTextbox2.Text == "")
-            {
-                bunifuMetroTextbox2.Text = "No. of assigned crimes";
-                bunifuMetroTextbox2.ForeColor = Color.DarkGray;
-            }
         }
 
         private void bunifuMetroTextbox3_Enter(object sender, EventArgs e)
@@ -993,6 +985,11 @@ namespace WindowsFormsApp2
         {
             itemsFound.Add(textBox3.Text);
             textBox3.ResetText();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

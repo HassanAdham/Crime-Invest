@@ -2,7 +2,7 @@
 <ArrayOfAdmin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Admin>
     <AdminID>12345</AdminID>
-    <AdminName>Hazem</AdminName>
+    <AdminName>Hassan</AdminName>
     <Password>123456</Password>
   </Admin>
 </ArrayOfAdmin>

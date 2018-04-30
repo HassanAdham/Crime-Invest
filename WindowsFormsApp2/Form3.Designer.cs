@@ -146,6 +146,7 @@
             this.selectCmbo.Size = new System.Drawing.Size(129, 25);
             this.selectCmbo.TabIndex = 5;
             this.selectCmbo.Text = "Select Crime ID";
+            this.selectCmbo.SelectedIndexChanged += new System.EventHandler(this.selectCmbo_SelectedIndexChanged_1);
             // 
             // panel2
             // 
@@ -306,9 +307,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.LogoAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(376, 268);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 99);
@@ -324,7 +325,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(187, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(275, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 

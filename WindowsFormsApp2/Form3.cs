@@ -74,9 +74,13 @@ namespace WindowsFormsApp2
             panel2.Visible = false;
             solveBtn.IsTab = true;
             LC = c.read();
+            selectCmbo.Items.Clear();
             for (int i = 0; i < LC.Count; i++)
             {
-                selectCmbo.Items.Add(LC[i].C_id);
+                if (LC[i].C_offId == officer.O_id && LC[i].C_Stat == true)
+                {
+                    selectCmbo.Items.Add(LC[i].C_id);
+                }
             }
         }
 
@@ -123,7 +127,6 @@ namespace WindowsFormsApp2
             else
             {
                 Crime cs = new Crime();
-                Dictionary<string, int> list = new Dictionary<string, int>();
                 for (int i = 0; i < LC.Count; i++)
                 {
                     if (selectCmbo.Text == LC[i].C_id)
@@ -409,6 +412,11 @@ namespace WindowsFormsApp2
                 PanelAnimator.ShowSync(SideMenu);
                 LogoAnimator.ShowSync(BtnMenu);
             }
+        }
+
+        private void selectCmbo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

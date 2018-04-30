@@ -54,7 +54,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.button1.Location = new System.Drawing.Point(34, 361);
+            this.button1.Location = new System.Drawing.Point(32, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(286, 41);
             this.button1.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Lime;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(131, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(129, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(89, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,7 +98,7 @@
             this.usernameTxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.usernameTxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.usernameTxt.LineThickness = 3;
-            this.usernameTxt.Location = new System.Drawing.Point(34, 262);
+            this.usernameTxt.Location = new System.Drawing.Point(32, 262);
             this.usernameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(286, 33);
@@ -118,7 +118,7 @@
             this.pwTxt.LineIdleColor = System.Drawing.Color.DarkGray;
             this.pwTxt.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.pwTxt.LineThickness = 3;
-            this.pwTxt.Location = new System.Drawing.Point(35, 303);
+            this.pwTxt.Location = new System.Drawing.Point(33, 303);
             this.pwTxt.Margin = new System.Windows.Forms.Padding(4);
             this.pwTxt.Name = "pwTxt";
             this.pwTxt.Size = new System.Drawing.Size(285, 33);
@@ -130,7 +130,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(35, 268);
+            this.pictureBox3.Location = new System.Drawing.Point(33, 268);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(20, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +141,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(35, 309);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 309);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(19, 19);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,7 +154,7 @@
             this.label1.BackColor = System.Drawing.Color.Lime;
             this.label1.Font = new System.Drawing.Font("Edwardian Script ITC", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.label1.Location = new System.Drawing.Point(34, 134);
+            this.label1.Location = new System.Drawing.Point(32, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 51);
             this.label1.TabIndex = 6;
@@ -164,11 +164,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Salmon;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(75, 187);
+            this.label2.Location = new System.Drawing.Point(73, 187);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 20);
+            this.label2.Size = new System.Drawing.Size(214, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "YOUR INSTANT ASSISTANT";
             // 
@@ -178,7 +178,7 @@
             this.username_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.username_txt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_txt.ForeColor = System.Drawing.Color.DarkGray;
-            this.username_txt.Location = new System.Drawing.Point(58, 268);
+            this.username_txt.Location = new System.Drawing.Point(56, 268);
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(255, 19);
             this.username_txt.TabIndex = 7;
@@ -193,7 +193,7 @@
             this.password_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_txt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_txt.ForeColor = System.Drawing.Color.DarkGray;
-            this.password_txt.Location = new System.Drawing.Point(61, 309);
+            this.password_txt.Location = new System.Drawing.Point(59, 309);
             this.password_txt.Name = "password_txt";
             this.password_txt.Size = new System.Drawing.Size(255, 19);
             this.password_txt.TabIndex = 7;

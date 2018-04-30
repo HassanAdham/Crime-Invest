@@ -1,15 +1,33 @@
 <?xml version="1.0"?>
 <ArrayOfOfficer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Officer>
-    <OfficerId>12345</OfficerId>
-    <OfficerName>Khaled</OfficerName>
-    <_x0023_assigCrime>0</_x0023_assigCrime>
-    <Password>123456</Password>
+    <OfficerId>0</OfficerId>
+    <OfficerName>Conan</OfficerName>
+    <_x0023_assigCrime>1</_x0023_assigCrime>
+    <Password>12345</Password>
   </Officer>
   <Officer>
     <OfficerId>1</OfficerId>
-    <OfficerName>Conan</OfficerName>
+    <OfficerName>Ateya</OfficerName>
     <_x0023_assigCrime>1</_x0023_assigCrime>
-    <Password>123456</Password>
+    <Password>12345</Password>
+  </Officer>
+  <Officer>
+    <OfficerId>2</OfficerId>
+    <OfficerName>Ibrahim</OfficerName>
+    <_x0023_assigCrime>1</_x0023_assigCrime>
+    <Password>12345</Password>
+  </Officer>
+  <Officer>
+    <OfficerId>3</OfficerId>
+    <OfficerName>Khaled</OfficerName>
+    <_x0023_assigCrime>0</_x0023_assigCrime>
+    <Password>12345</Password>
+  </Officer>
+  <Officer>
+    <OfficerId>4</OfficerId>
+    <OfficerName>Hassan</OfficerName>
+    <_x0023_assigCrime>0</_x0023_assigCrime>
+    <Password>123</Password>
   </Officer>
 </ArrayOfOfficer>

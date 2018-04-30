@@ -85,12 +85,11 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.button7 = new System.Windows.Forms.Button();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -320,6 +319,7 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label8
             // 
@@ -1180,7 +1180,7 @@
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.DarkGray;
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(38, 105);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(38, 69);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(221, 44);
@@ -1201,38 +1201,13 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(40, 259);
+            this.button7.Location = new System.Drawing.Point(40, 210);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 42);
             this.button7.TabIndex = 2;
             this.button7.Text = "Add";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // bunifuMetroTextbox2
-            // 
-            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.bunifuMetroTextbox2.BorderThickness = 3;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PanelAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.bunifuMetroTextbox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(38, 157);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(221, 44);
-            this.bunifuMetroTextbox2.TabIndex = 4;
-            this.bunifuMetroTextbox2.Text = "No. of assigned crimes";
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMetroTextbox2.Visible = false;
-            this.bunifuMetroTextbox2.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox2_OnValueChanged);
-            this.bunifuMetroTextbox2.Enter += new System.EventHandler(this.bunifuMetroTextbox2_Enter);
-            this.bunifuMetroTextbox2.Leave += new System.EventHandler(this.bunifuMetroTextbox2_Leave);
             // 
             // radioButton3
             // 
@@ -1264,7 +1239,6 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bunifuMetroTextbox3);
             this.panel3.Controls.Add(this.radioButton3);
-            this.panel3.Controls.Add(this.bunifuMetroTextbox2);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.bunifuMetroTextbox1);
             this.panel3.Controls.Add(this.radioButton2);
@@ -1280,6 +1254,21 @@
             this.panel3.Visible = false;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.PanelAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(38, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 22);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "No. of assigned crimes: ";
+            this.label1.Visible = false;
+            // 
             // bunifuMetroTextbox3
             // 
             this.bunifuMetroTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
@@ -1293,7 +1282,7 @@
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.DarkGray;
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(38, 208);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(38, 159);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(221, 44);
@@ -1325,21 +1314,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.LogoAnimator.DefaultAnimation = animation1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 22);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "No. of assigned crimes: ";
-            this.label1.Visible = false;
             // 
             // Form2
             // 
@@ -1432,7 +1406,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.Button button7;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
