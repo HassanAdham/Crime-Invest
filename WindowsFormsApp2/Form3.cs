@@ -104,7 +104,7 @@ namespace WindowsFormsApp2
                             else
                                 disLbl.Text = "There are no Disputes";
                             histLbl.Text = LC[i].C_IP[j].Pasthist;
-                            MemoryStream ms = new MemoryStream(ImgsUpdate[count]);
+                            MemoryStream ms = new MemoryStream(LC[i].C_IP[j].Image);
                             pictureBox3.Image = Image.FromStream(ms);
                             break;
                         }
@@ -146,7 +146,7 @@ namespace WindowsFormsApp2
                     {
                         if (cs.C_Tid == LCT[i].T_id)
                         {
-                            if (cs.C_IP[i].Pasthist == cs.C_Tid)
+                            if (cs.C_IP[i].Pasthist == LCT[j].T_name)
                             {
                                 pp.score++;
                                 break;
@@ -220,6 +220,7 @@ namespace WindowsFormsApp2
             {
                 itemsCmbo.Items.Add(c.C_item[i]);
             }
+            comboBox6.Items.Clear();
             for (int i = 0; i < c.C_IP.Count; i++)
             {
                 comboBox6.Items.Add(c.C_IP[i].IP_name);
@@ -337,7 +338,7 @@ namespace WindowsFormsApp2
                     selectCmbo.Items.Add(LC[i].C_id);
                 }
             }
-
+            MessageBox.Show("Updated");
         }
 
         private void backBtn_Click(object sender, EventArgs e)

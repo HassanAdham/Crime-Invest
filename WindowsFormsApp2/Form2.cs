@@ -214,17 +214,21 @@ namespace WindowsFormsApp2
                 people.IP_disp = false;
             }
 
-            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            people.Image = br.ReadBytes((int)fs.Length);
-
+            if (imgloc != null)
+            {
+                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                people.Image = br.ReadBytes((int)fs.Length);
+            }
+            else
+            {
+                MessageBox.Show("Please insert image");
+            }
             iplist = people.read();
             people.IP_id = iplist.Count.ToString();
             people.write();
-            if (!ipl.Contains(people))
-            {
-                ipl.Add(people);
-            }
+            
+            ipl.Add(people);
             textBox4.ResetText();
             ageCmbo.ResetText();
             locationCmbo.ResetText();
@@ -321,18 +325,19 @@ namespace WindowsFormsApp2
                 crime.C_desc = textBox2.Text;
                 crime.C_item = itemsFound;
                 crime.C_Imgs = Imgs;
-                FileStream FS = new FileStream("Officer.xml", FileMode.Truncate);
-                FS.Close();
-                FS = new FileStream("Officer.xml", FileMode.Append);
-                XmlSerializer ser = new XmlSerializer(LO.GetType());
-                ser.Serialize(FS, LO);
-                FS.Close();
                 crime.C_IP = ipl;
                 crime.write();
                 LC.Add(crime);
                 ipl.Clear();
                 itemsFound.Clear();
                 Imgs.Clear();
+                FileStream FS = new FileStream("Officer.xml", FileMode.Truncate);
+                FS.Close();
+                FS = new FileStream("Officer.xml", FileMode.Append);
+                XmlSerializer ser = new XmlSerializer(LO.GetType());
+                ser.Serialize(FS, LO);
+                FS.Close();
+
                 MessageBox.Show("Added");
                 
             }
@@ -710,8 +715,8 @@ namespace WindowsFormsApp2
                 officer.assigNum = 0;
                 officer.O_Password = bunifuMetroTextbox3.Text;
                 officer.write();
-                if (!LO.Contains(officer))
-                    LO.Add(officer);
+                LO.Add(officer);
+                MessageBox.Show("Added");
             }
             else if (button7.Text == "Delete")
             {
@@ -741,8 +746,9 @@ namespace WindowsFormsApp2
                 fS.Close();
                 fS = new FileStream("Crime.xml", FileMode.Append);
                 XmlSerializer Ser = new XmlSerializer(LC.GetType());
-                ser.Serialize(FS, LC);
+                Ser.Serialize(fS, LC);
                 fS.Close();
+                MessageBox.Show("Deleted");
             }
             else if (button7.Text == "Update")
             {
@@ -762,6 +768,14 @@ namespace WindowsFormsApp2
                 ser.Serialize(FS, LO);
                 FS.Close();
                 MessageBox.Show("Updated");
+            }
+            comboBox6.Items.Clear();
+            officerCmbo.Items.Clear();
+            for (int i = 0; i < LO.Count; i++)
+            {
+                if (LO[i].assigNum < 10)
+                    officerCmbo.Items.Add(LO[i].O_id);
+                comboBox6.Items.Add(LO[i].O_id);
             }
         }
 
