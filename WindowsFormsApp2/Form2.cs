@@ -108,6 +108,7 @@ namespace WindowsFormsApp2
             }
             bunifuMetroTextbox1.Text = off.O_name;
             bunifuMetroTextbox2.Text = off.assigNum.ToString();
+            label1.Text = "No. of assigned crimes: " + off.assigNum.ToString();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -635,6 +636,7 @@ namespace WindowsFormsApp2
                 bunifuMetroTextbox1.Visible = true;
                 bunifuMetroTextbox2.Visible = true;
                 bunifuMetroTextbox3.Visible = true;
+                label1.Visible = false;
                 bunifuMetroTextbox1.Location = new Point(40, 69);
                 bunifuMetroTextbox2.Location = new Point(40, 121);
                 bunifuMetroTextbox3.Location = new Point(40, 172);
@@ -664,6 +666,7 @@ namespace WindowsFormsApp2
 
                 comboBox6.Visible = true;
                 bunifuMetroTextbox1.Visible = false;
+                label1.Visible = false;
                 bunifuMetroTextbox2.Visible = false;
                 bunifuMetroTextbox3.Visible = false;
                 button7.Location = new Point(40, 105);
@@ -691,12 +694,13 @@ namespace WindowsFormsApp2
 
                 comboBox6.Visible = true;
                 bunifuMetroTextbox1.Visible = true;
-                bunifuMetroTextbox2.Visible = true;
+                bunifuMetroTextbox2.Visible = false;
+                label1.Visible = true;
                 bunifuMetroTextbox3.Visible = true;
                 button7.Location = new Point(40, 259);
+                label1.Text = "No. of assigned crimes: ";
                 bunifuMetroTextbox1.Location = new Point(38, 105);
-                bunifuMetroTextbox2.Location = new Point(38, 157);
-                bunifuMetroTextbox3.Location = new Point(38, 208);
+                bunifuMetroTextbox3.Location = new Point(38, 157);
             }
             else
             {
@@ -757,7 +761,6 @@ namespace WindowsFormsApp2
                     if (comboBox6.Text == LO[i].O_id)
                     {
                         LO[i].O_name = bunifuMetroTextbox1.Text;
-                        LO[i].assigNum = Int32.Parse(bunifuMetroTextbox2.Text);
                         break;
                     }
                 }

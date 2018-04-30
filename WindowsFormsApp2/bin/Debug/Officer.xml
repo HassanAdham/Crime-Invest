@@ -3,6 +3,12 @@
   <Officer>
     <OfficerId>12345</OfficerId>
     <OfficerName>Khaled</OfficerName>
+    <_x0023_assigCrime>0</_x0023_assigCrime>
+    <Password>123456</Password>
+  </Officer>
+  <Officer>
+    <OfficerId>1</OfficerId>
+    <OfficerName>Conan</OfficerName>
     <_x0023_assigCrime>1</_x0023_assigCrime>
     <Password>123456</Password>
   </Officer>

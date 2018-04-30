@@ -90,6 +90,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -164,6 +165,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(144, 76);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
@@ -584,6 +586,8 @@
             this.comboBox9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.comboBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "None"});
             this.comboBox9.Location = new System.Drawing.Point(188, 359);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(98, 25);
@@ -601,6 +605,26 @@
             this.locationCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.locationCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.locationCmbo.FormattingEnabled = true;
+            this.locationCmbo.Items.AddRange(new object[] {
+            "El-Marg",
+            "Ain Shams",
+            "El-Matareyya",
+            "Helmiet EL-Zaitoun",
+            "EL-Zaitoun",
+            "Saray El-Qobba",
+            "Hammamat El-Qobba",
+            "Kobri El-Qobba",
+            "Abbasiya",
+            "Abdo Pasha",
+            "El-Demerdash",
+            "Ramses",
+            "Alf Maskan",
+            "Heliopolis",
+            "Sheraton",
+            "Roxy",
+            "Makram Ebeid",
+            "Abbas El Akkad",
+            "Seventh District"});
             this.locationCmbo.Location = new System.Drawing.Point(248, 298);
             this.locationCmbo.Name = "locationCmbo";
             this.locationCmbo.Size = new System.Drawing.Size(124, 25);
@@ -618,6 +642,38 @@
             this.ageCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.ageCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.ageCmbo.FormattingEnabled = true;
+            this.ageCmbo.Items.AddRange(new object[] {
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50"});
             this.ageCmbo.Location = new System.Drawing.Point(188, 298);
             this.ageCmbo.Name = "ageCmbo";
             this.ageCmbo.Size = new System.Drawing.Size(54, 25);
@@ -670,6 +726,26 @@
             this.areaCmbo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.areaCmbo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.areaCmbo.FormattingEnabled = true;
+            this.areaCmbo.Items.AddRange(new object[] {
+            "El-Marg",
+            "Ain Shams",
+            "El-Matareyya",
+            "Helmiet EL-Zaitoun",
+            "EL-Zaitoun",
+            "Saray El-Qobba",
+            "Hammamat El-Qobba",
+            "Kobri El-Qobba",
+            "Abbasiya",
+            "Abdo Pasha",
+            "El-Demerdash",
+            "Ramses",
+            "Alf Maskan",
+            "Heliopolis",
+            "Sheraton",
+            "Roxy",
+            "Makram Ebeid",
+            "Abbas El Akkad",
+            "Seventh District"});
             this.areaCmbo.Location = new System.Drawing.Point(40, 240);
             this.areaCmbo.Name = "areaCmbo";
             this.areaCmbo.Size = new System.Drawing.Size(121, 25);
@@ -1027,8 +1103,6 @@
             this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "12345"});
             this.comboBox6.Location = new System.Drawing.Point(40, 69);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(150, 29);
@@ -1126,6 +1200,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(40, 259);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 42);
@@ -1186,6 +1261,7 @@
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bunifuMetroTextbox3);
             this.panel3.Controls.Add(this.radioButton3);
             this.panel3.Controls.Add(this.bunifuMetroTextbox2);
@@ -1250,6 +1326,21 @@
             animation1.TransparencyCoeff = 0F;
             this.LogoAnimator.DefaultAnimation = animation1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.PanelAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(38, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 22);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "No. of assigned crimes: ";
+            this.label1.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,8 +1348,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(72)))), ((int)(((byte)(76)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(720, 480);
-            this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
@@ -1281,6 +1372,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1344,5 +1436,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private System.Windows.Forms.Label label1;
     }
 }

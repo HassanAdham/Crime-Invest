@@ -8,4 +8,40 @@
     <TypeId>1</TypeId>
     <TypeName>Murder</TypeName>
   </CrimeType>
+  <CrimeType>
+    <TypeId>2</TypeId>
+    <TypeName>Burglary</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>3</TypeId>
+    <TypeName>Childhood abuse</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>4</TypeId>
+    <TypeName>Cyber crime</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>5</TypeId>
+    <TypeName>Fraud</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>6</TypeId>
+    <TypeName>Robbery</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>7</TypeId>
+    <TypeName>Sexual harassment</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>8</TypeId>
+    <TypeName>Homicide</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>9</TypeId>
+    <TypeName>Forcible Rape</TypeName>
+  </CrimeType>
+  <CrimeType>
+    <TypeId>10</TypeId>
+    <TypeName>Terrorism</TypeName>
+  </CrimeType>
 </ArrayOfCrimeType>
